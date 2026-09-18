@@ -16,29 +16,63 @@ def get_key():
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return ch
 
-def render_header(engine: InferenceEngine, prompt_text: str):
+def ask_yes_no(prompt: str) -> bool:
+    options = [("Sim", True), ("Não", False)]
+    selected_idx = 0
+    
+    print("=" * 80)
+    print("🧠 Akinator DSM-5 - Inferência Probabilística")
+    print("=" * 80)
+    
+    while True:
+        menu_parts = []
+        for i, (label, val) in enumerate(options):
+            if i == selected_idx:
+                menu_parts.append(f"\033[96m❯ [{label}]\033[0m")
+            else:
+                menu_parts.append(f"  [{label}]")
+        
+        menu_str = " ".join(menu_parts)
+        
+        sys.stdout.write(f"\r\033[K{prompt} {menu_str}")
+        sys.stdout.flush()
+        
+        key = get_key()
+        if key == '\x1b[C': # Seta Direita
+            selected_idx = min(len(options) - 1, selected_idx + 1)
+        elif key == '\x1b[D': # Seta Esquerda
+            selected_idx = max(0, selected_idx - 1)
+        elif key in ('\r', '\n'): # Enter
+            sys.stdout.write("\n\n")
+            return options[selected_idx][1]
+        elif key == '\x03': # Ctrl+C
+            sys.stdout.write("\nOperação cancelada pelo usuário.\n")
+            sys.exit(0)
+
+def render_header(engine: InferenceEngine, prompt_text: str, show_log: bool):
     # Cabeçalho
     print("=" * 80)
     print("🧠 Akinator DSM-5 - Inferência Probabilística")
     print("=" * 80)
     
-    # Leaderboard (Top 5)
-    print("  🏆 LEADERBOARD (Top 5 Diagnósticos):")
-    sorted_disorders = sorted(engine.scores.items(), key=lambda x: x[1], reverse=True)
-    top_5 = sorted_disorders[:5]
-    
-    for i, (d_id, score) in enumerate(top_5):
-        name = engine.active_disorders.get(d_id, engine.disorders[0]).get("name", d_id) if d_id in engine.active_disorders else d_id
-        # Limita tamanho do nome para não quebrar layout
-        name = (name[:45] + '...') if len(name) > 45 else name
-        print(f"  {i+1}. {name.ljust(48)} ({score:+.2f})")
-    print("=" * 80)
+    if show_log:
+        # Leaderboard (Top 5)
+        print("  🏆 LEADERBOARD (Top 5 Diagnósticos):")
+        sorted_disorders = sorted(engine.scores.items(), key=lambda x: x[1], reverse=True)
+        top_5 = sorted_disorders[:5]
+        
+        for i, (d_id, score) in enumerate(top_5):
+            name = engine.active_disorders.get(d_id, engine.disorders[0]).get("name", d_id) if d_id in engine.active_disorders else d_id
+            # Limita tamanho do nome para não quebrar layout
+            name = (name[:45] + '...') if len(name) > 45 else name
+            print(f"  {i+1}. {name.ljust(48)} ({score:+.2f})")
+        print("=" * 80)
     
     # Pergunta
     wrapped_prompt = textwrap.fill(prompt_text, width=80)
     print(f"{wrapped_prompt}")
 
-def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: int, prompt: str) -> float:
+def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: int, prompt: str, show_log: bool) -> float:
     prompt_text = f"Pergunta [{question_count+1}/{max_questions}]: {prompt}"
     
     options = [
@@ -50,7 +84,7 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
     ]
     selected_idx = 2  # Começa no "Não Sei" por padrão
     
-    render_header(engine, prompt_text)
+    render_header(engine, prompt_text, show_log)
     
     while True:
         menu_parts = []
@@ -92,10 +126,19 @@ def print_diagnosis_details(disorder_id: str, engine_instance):
         return
 
     print(f"\033[1;36m=== DETALHAMENTO CLÍNICO ===\033[0m")
-    print(f"\033[1mO que é:\033[0m {info.get('descricao', '')}")
-    print(f"\033[1mSintomas Principais:\033[0m {info.get('sintomas_principais', '')}")
-    print(f"\033[1mCritérios Clínicos:\033[0m {info.get('criterios_clinicos', '')}")
-    print(f"\033[1mComo Proceder:\033[0m {info.get('como_proceder', '')}")
+    
+    desc_str = f"O que é: {info.get('descricao', '')}"
+    print(textwrap.fill(desc_str, width=80).replace("O que é:", "\033[1mO que é:\033[0m", 1) + "\n")
+    
+    sintomas_str = f"Sintomas Principais: {info.get('sintomas_principais', '')}"
+    print(textwrap.fill(sintomas_str, width=80).replace("Sintomas Principais:", "\033[1mSintomas Principais:\033[0m", 1) + "\n")
+    
+    criterios_str = f"Critérios Clínicos: {info.get('criterios_clinicos', '')}"
+    print(textwrap.fill(criterios_str, width=80).replace("Critérios Clínicos:", "\033[1mCritérios Clínicos:\033[0m", 1) + "\n")
+    
+    proceder_str = f"Como Proceder: {info.get('como_proceder', '')}"
+    print(textwrap.fill(proceder_str, width=80).replace("Como Proceder:", "\033[1mComo Proceder:\033[0m", 1))
+    
     print("=" * 80)
 
 def main():
@@ -104,6 +147,8 @@ def main():
     except FileNotFoundError:
         print("Erro: O arquivo 'knowledge_base.json' não foi encontrado no diretório atual.")
         sys.exit(1)
+    
+    show_log = ask_yes_no("Ativar log de debug (ranking de diagnósticos)?")
     
     question_count = 0
     max_questions = 50
@@ -125,7 +170,7 @@ def main():
         if not q:
             break
             
-        weight = ask_frequency(engine, question_count, max_questions, q['text'])
+        weight = ask_frequency(engine, question_count, max_questions, q['text'], show_log)
         engine.process_answer(q["id"], weight)
         question_count += 1
         
