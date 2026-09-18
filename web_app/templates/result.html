@@ -5,18 +5,18 @@
     {% if result %}
         <h3 class="text-success mb-3">✅ DIAGNÓSTICO ATINGIDO</h3>
         <h4 class="mb-3">{{ result.name }}</h4>
-        <h5 class="text-info mb-4">Score de Probabilidade: {{ result.score }}</h5>
+        <h5 class="text-primary mb-4">Score de Probabilidade: {{ result.score }}</h5>
     {% else %}
         <h3 class="text-danger mb-3">❌ Diagnóstico Inconclusivo</h3>
         <p>Nenhum transtorno reconhecido com base nas respostas fornecidas.</p>
     {% endif %}
     
-    <a href="{% url 'index' %}" class="btn btn-outline-light mt-3 px-4 py-2" id="restart-btn">Reiniciar Teste</a>
+    <a href="{% url 'index' %}" class="btn btn-outline-primary mt-3 px-4 py-2" id="restart-btn">Reiniciar Teste</a>
 </div>
 
 {% if result and result.details %}
 <div class="card p-4">
-    <h4 class="text-info mb-4">=== DETALHAMENTO CLÍNICO ===</h4>
+    <h4 class="text-primary mb-4">=== DETALHAMENTO CLÍNICO ===</h4>
     
     <div class="mb-4">
         <h5 class="fw-bold">O que é:</h5>

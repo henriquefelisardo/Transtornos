@@ -4,10 +4,10 @@
 
 {% if show_log and top_disorders %}
 <div class="card p-3 mb-4">
-    <h5 class="text-warning">🏆 LEADERBOARD (Top 5 Diagnósticos):</h5>
+    <h5 class="text-dark">🏆 LEADERBOARD (Top 5 Diagnósticos):</h5>
     <ul class="list-unstyled mb-0">
         {% for d in top_disorders %}
-        <li>{{ d.rank }}. {{ d.name }} <span class="float-end text-info">({{ d.score }})</span></li>
+        <li>{{ d.rank }}. {{ d.name }} <span class="float-end text-primary">({{ d.score }})</span></li>
         {% endfor %}
     </ul>
 </div>
@@ -17,13 +17,28 @@
     <h5 class="mb-4">Pergunta [{{ question_count }}/{{ max_questions }}]:</h5>
     <p class="fs-5 mb-5">{{ question.text }}</p>
     
-    <div class="d-flex flex-wrap justify-content-center gap-2" id="options-container">
+    <div class="d-flex flex-nowrap justify-content-center w-100 gap-2" id="options-container">
         <!-- These IDs and data-weights map to the 5 standard options -->
-        <div class="btn option-btn px-3 py-2" data-weight="0.0">Discordo Totalmente</div>
-        <div class="btn option-btn px-3 py-2" data-weight="0.25">Discordo</div>
-        <div class="btn option-btn px-3 py-2" data-weight="0.5">Não Sei</div>
-        <div class="btn option-btn px-3 py-2" data-weight="0.75">Concordo um pouco</div>
-        <div class="btn option-btn px-3 py-2" data-weight="1.0">Concordo Totalmente</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.0">
+            <div class="fw-bold small pb-1">[1]</div>
+            <span class="label">Discordo Totalmente</span>
+        </div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.25">
+            <div class="fw-bold small pb-1">[2]</div>
+            <span class="label">Discordo</span>
+        </div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.5">
+            <div class="fw-bold small pb-1">[3]</div>
+            <span class="label">Não Sei</span>
+        </div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.75">
+            <div class="fw-bold small pb-1">[4]</div>
+            <span class="label">Concordo um pouco</span>
+        </div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="1.0">
+            <div class="fw-bold small pb-1">[5]</div>
+            <span class="label">Concordo Totalmente</span>
+        </div>
     </div>
 </div>
 
@@ -34,7 +49,7 @@
 </form>
 
 <div class="text-center mt-4 text-muted">
-    <small>Use as <b>setas (← →)</b> para navegar e <b>Enter/Espaço</b> para selecionar.</small>
+    <small>Use as <b>setas (← →)</b> ou números <b>(1-5)</b> e <b>Enter/Espaço</b> para selecionar, ou simplesmente <b>clique com o mouse</b>.</small>
 </div>
 
 <script>
@@ -44,17 +59,33 @@
         
         function updateSelection() {
             options.forEach((opt, idx) => {
+                const label = opt.querySelector('.label');
                 if (idx === selectedIdx) {
                     opt.classList.add("option-active");
-                    opt.innerHTML = "❯ " + opt.innerHTML.replace("❯ ", "");
+                    if (!label.innerText.startsWith("❯ ")) {
+                        label.innerText = "❯ " + label.innerText;
+                    }
                 } else {
                     opt.classList.remove("option-active");
-                    opt.innerHTML = opt.innerHTML.replace("❯ ", "");
+                    if (label.innerText.startsWith("❯ ")) {
+                        label.innerText = label.innerText.replace("❯ ", "");
+                    }
                 }
             });
         }
         
         updateSelection();
+
+        // Mouse click support
+        options.forEach((opt, idx) => {
+            opt.addEventListener("click", function() {
+                selectedIdx = idx;
+                updateSelection();
+                const weight = options[selectedIdx].getAttribute("data-weight");
+                document.getElementById("weight-input").value = weight;
+                document.getElementById("answer-form").submit();
+            });
+        });
         
         document.addEventListener("keydown", function(e) {
             if (e.key === "ArrowRight") {
@@ -65,6 +96,12 @@
                 updateSelection();
             } else if (e.key === "Enter" || e.code === "Space") {
                 e.preventDefault(); // Prevent scrolling on space
+                const weight = options[selectedIdx].getAttribute("data-weight");
+                document.getElementById("weight-input").value = weight;
+                document.getElementById("answer-form").submit();
+            } else if (["1", "2", "3", "4", "5"].includes(e.key)) {
+                selectedIdx = parseInt(e.key) - 1;
+                updateSelection();
                 const weight = options[selectedIdx].getAttribute("data-weight");
                 document.getElementById("weight-input").value = weight;
                 document.getElementById("answer-form").submit();
