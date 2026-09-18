@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('question/', views.question, name='question'),
     path('answer/', views.answer, name='answer'),
+    path('undo/', views.undo, name='undo'),
     path('result/', views.result, name='result'),
 ]

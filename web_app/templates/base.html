@@ -22,10 +22,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="text-center mb-3">
-            <h2 class="header-title">🧠 Akinator DSM-5 - Inferência Probabilística</h2>
-            <hr style="border-color: #dee2e6; margin: 1rem 0;">
+        <div class="text-center mb-2">
+            <h2 class="header-title m-0 d-block d-md-inline-block align-middle">🧠 Akinator DSM-5 - Inferência Probabilística</h2>
+            {% if request.path != '/' %}
+            <a href="{% url 'index' %}" onclick="if(!confirm('Tem certeza que deseja reiniciar o teste e voltar ao menu inicial? Todo o seu progresso será perdido.')){event.preventDefault();}" class="btn btn-outline-danger btn-sm ms-md-3 mt-2 mt-md-0 align-middle" title="Voltar ao Menu">🔄 Início</a>
+            {% endif %}
         </div>
+        <hr style="border-color: #dee2e6; margin: 1rem 0;">
         {% block content %}{% endblock %}
     </div>
 </body>

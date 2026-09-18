@@ -84,6 +84,16 @@ def answer(request):
         
     return redirect("question")
 
+def undo(request):
+    if request.method == "POST":
+        answers = request.session.get("answers", {})
+        if answers:
+            # Remove the last inserted answer
+            last_key = list(answers.keys())[-1]
+            del answers[last_key]
+            request.session["answers"] = answers
+    return redirect("question")
+
 def result(request):
     engine = get_engine_state(request)
     stop, result_obj = engine.check_stop_conditions()

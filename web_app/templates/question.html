@@ -14,7 +14,15 @@
 {% endif %}
 
 <div class="card p-3">
-    <h6 class="mb-2" style="font-size: clamp(0.9rem, 3vw, 1.1rem);">Pergunta [{{ question_count }}/{{ max_questions }}]:</h6>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <h6 class="m-0" style="font-size: clamp(0.9rem, 3vw, 1.1rem);">Pergunta [{{ question_count }}/{{ max_questions }}]:</h6>
+        {% if question_count > 1 %}
+        <form method="POST" action="{% url 'undo' %}" class="m-0" id="undo-form">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-sm btn-outline-secondary py-0">⬅️ Voltar Pergunta</button>
+        </form>
+        {% endif %}
+    </div>
     <p class="mb-3 fw-bold" style="font-size: clamp(1rem, 4vw, 1.25rem);">{{ question.text }}</p>
     
     <div class="d-flex flex-nowrap justify-content-center w-100 gap-1" id="options-container">
@@ -49,7 +57,7 @@
 </form>
 
 <div class="text-center mt-3 text-muted" style="font-size: clamp(0.7rem, 2vw, 0.9rem);">
-    <small>Use as <b>setas (← →)</b> ou números <b>(1-5)</b> e <b>Enter/Espaço</b> para selecionar, ou simplesmente <b>clique com o mouse</b>.</small>
+    <small>Use as <b>setas horizontais (← →)</b> ou números <b>(1-5)</b> e <b>Enter/Espaço</b> para selecionar.<br>Use as <b>setas verticais (↑ ↓)</b> para voltar à pergunta anterior.</small>
 </div>
 
 <script>
@@ -94,6 +102,12 @@
             } else if (e.key === "ArrowLeft") {
                 selectedIdx = Math.max(0, selectedIdx - 1);
                 updateSelection();
+            } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+                const undoForm = document.getElementById("undo-form");
+                if (undoForm) {
+                    e.preventDefault();
+                    undoForm.submit();
+                }
             } else if (e.key === "Enter" || e.code === "Space") {
                 e.preventDefault(); // Prevent scrolling on space
                 const weight = options[selectedIdx].getAttribute("data-weight");
