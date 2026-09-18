@@ -1,0 +1,65 @@
+import json
+
+with open("knowledge_base.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+for q in data["questions"]:
+    t = q["text"]
+    
+    t = t.replace("Eu percebe que", "Eu percebo que")
+    t = t.replace("o seu jeito", "o meu jeito")
+    t = t.replace("suas emoções", "minhas emoções")
+    t = t.replace("Eu é ", "Eu sou ")
+    t = t.replace("Eu evita ", "Eu evito ")
+    t = t.replace("Eu se ", "Eu me ")
+    t = t.replace("você", "eu")
+    t = t.replace("Eu sente ", "Eu sinto ")
+    t = t.replace("Eu sofre ", "Eu sofro ")
+    t = t.replace("Eu costuma ", "Eu costumo ")
+    t = t.replace("Eu apresenta ", "Eu apresento ")
+    t = t.replace("Eu tem ", "Eu tenho ")
+    t = t.replace("Eu acha ", "Eu acho ")
+    t = t.replace("Eu percebe ", "Eu percebo ")
+    t = t.replace("Eu exige ", "Eu exijo ")
+    t = t.replace("Eu perdeu ", "Eu perdi ")
+    t = t.replace("Eu fala ", "Eu falo ")
+    t = t.replace("Eu nota ", "Eu noto ")
+    t = t.replace("Eu já teve ", "Eu já tive ")
+    t = t.replace("Eu acredita ", "Eu acredito ")
+    t = t.replace("Eu demonstra ", "Eu demonstro ")
+    t = t.replace("Eu suspeita ", "Eu suspeito ")
+    t = t.replace("Eu ouve ", "Eu ouço ")
+    t = t.replace("Eu reluta ", "Eu reluto ")
+    t = t.replace("Eu guarda ", "Eu guardo ")
+    t = t.replace("Eu faz ", "Eu faço ")
+    t = t.replace("Eu usa ", "Eu uso ")
+    t = t.replace("Eu age ", "Eu ajo ")
+    t = t.replace("Eu tenta ", "Eu tento ")
+    t = t.replace("Eu consegue ", "Eu consigo ")
+    t = t.replace("Eu possui ", "Eu possuo ")
+    t = t.replace("Eu prefere ", "Eu prefiro ")
+    t = t.replace("Eu idealiza ", "Eu idealizo ")
+    t = t.replace("Eu exige ", "Eu exijo ")
+    t = t.replace("para eu", "para mim")
+    t = t.replace("de eu", "de mim")
+    t = t.replace("eu realmente é", "eu realmente sou")
+    t = t.replace("sua vida", "minha vida")
+    t = t.replace("te admiram", "me admiram")
+    t = t.replace("te compreender", "me compreender")
+    t = t.replace("falam com eu", "falam comigo")
+    t = t.replace("te deixa", "me deixa")
+    t = t.replace("te rejeitou", "me rejeitou")
+    t = t.replace("te criticou", "me criticou")
+    t = t.replace("te ignorou", "me ignorou")
+    t = t.replace("eu já se cortou", "eu já me cortei")
+    t = t.replace("eu se interessa", "eu me interesso")
+    t = t.replace("eu consegue", "eu consigo")
+    t = t.replace("seus planos", "meus planos")
+    t = t.replace("seu humor", "meu humor")
+    
+    q["text"] = t
+
+with open("knowledge_base.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2, ensure_ascii=False)
+
+print("Grammar fixed.")

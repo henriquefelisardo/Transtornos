@@ -372,7 +372,7 @@
   "questions": [
     {
       "id": "q_psicotico_umbrella",
-      "text": "Eu tenho visto, ouvido ou acreditado em coisas que as outras pessoas dizem não ser reais, ou sentiu sua mente muito confusa ultimamente.",
+      "text": "Eu tenho visto, ouvido ou acreditado em coisas que as outras pessoas dizem não ser reais, ou senti minha mente muito confusa ultimamente.",
       "type": "umbrella",
       "targets": [
         "tp_breve",
@@ -382,7 +382,7 @@
     },
     {
       "id": "q_humor_umbrella",
-      "text": "Eu já teve períodos longos de tristeza profunda ou épocas em que se sentiu exageradamente eufórico, acelerado e sem precisar dormir.",
+      "text": "Eu já tive períodos longos de tristeza profunda ou épocas em que me senti exageradamente eufórico, acelerado e sem precisar dormir.",
       "type": "umbrella",
       "targets": [
         "bipolar_1",
@@ -392,7 +392,7 @@
     },
     {
       "id": "q_ansiedade_umbrella",
-      "text": "Eu sofre frequentemente com preocupações exageradas, ansiedade intensa constante ou crises súbitas de pânico.",
+      "text": "Eu sofro frequentemente com preocupações exageradas, ansiedade intensa constante ou crises súbitas de pânico.",
       "type": "umbrella",
       "targets": [
         "ansiedade_generalizada",
@@ -401,7 +401,7 @@
     },
     {
       "id": "q_personalidade_umbrella",
-      "text": "Eu percebe que, desde o início da fase adulta, o seu jeito de ser, agir e se relacionar sempre trouxe muito sofrimento ou problemas repetidos com outras pessoas.",
+      "text": "Eu percebo que, desde o início da fase adulta, o meu jeito de ser, agir e me relacionar sempre trouxe muito sofrimento ou problemas repetidos com outras pessoas.",
       "type": "umbrella",
       "targets": [
         "tp_paranoide",
@@ -415,7 +415,7 @@
     },
     {
       "id": "q_neurodesenv_umbrella",
-      "text": "Desde a sua infância, você apresenta muita dificuldade de atenção, agitação física intensa ou dificuldades marcantes de se comunicar e fazer amizades.",
+      "text": "Desde a minha infância, eu apresento muita dificuldade de atenção, agitação física intensa ou dificuldades marcantes de se comunicar e fazer amizades.",
       "type": "umbrella",
       "targets": [
         "tdah",
@@ -432,7 +432,7 @@
     },
     {
       "id": "q_toc_umbrella",
-      "text": "Eu sofre com pensamentos ruins que não saem da cabeça e sente necessidade de realizar repetidamente certas ações ou rituais para aliviar essa aflição.",
+      "text": "Eu sofro com pensamentos ruins que não saem da cabeça e sente necessidade de realizar repetidamente certas ações ou rituais para aliviar essa aflição.",
       "type": "umbrella",
       "targets": [
         "toc"
@@ -440,7 +440,7 @@
     },
     {
       "id": "q_delirios",
-      "text": "Eu costumo ter crenças muito fixas e inflexíveis, mesmo quando as outras pessoas dizem e provam ser irreais? (Ex: achar que está sendo perseguido, que há complôs contra você, ou que consegue ler a mente dos outros).",
+      "text": "Eu costumo ter crenças muito fixas e inflexíveis, mesmo quando as outras pessoas dizem e provam ser irreais? (Ex: achar que está sendo perseguido, que há complôs contra eu, ou que consegue ler a mente dos outros).",
       "type": "specific",
       "targets": [
         "tp_breve",
@@ -460,7 +460,7 @@
     },
     {
       "id": "q_discurso_desorganizado",
-      "text": "As pessoas frequentemente dizem que o que você fala parece muito confuso, incoerente ou que você muda de assunto de forma estranha.",
+      "text": "As pessoas frequentemente dizem que o que eu fala parece muito confuso, incoerente ou que eu muda de assunto de forma estranha.",
       "type": "specific",
       "targets": [
         "tp_breve",
@@ -480,7 +480,7 @@
     },
     {
       "id": "q_psicotico_duracao_breve",
-      "text": "Esses episódios de ouvir vozes ou delírios duraram muito pouco tempo, entre 1 dia e 1 mês, e depois você voltou totalmente ao normal.",
+      "text": "Esses episódios de ouvir vozes ou delírios duraram muito pouco tempo, entre 1 dia e 1 mês, e depois eu voltou totalmente ao normal.",
       "type": "specific",
       "targets": [
         "tp_breve"
@@ -489,7 +489,7 @@
     },
     {
       "id": "q_psicotico_retorno_normal",
-      "text": "Eu se recuperou totalmente após esses episódios.",
+      "text": "Eu me recuperou totalmente após esses episódios.",
       "type": "specific",
       "targets": [
         "tp_breve"
@@ -535,7 +535,7 @@
     },
     {
       "id": "q_episodio_maniaco",
-      "text": "Eu já teve pelo menos uma vez na vida um período de uma semana ou mais onde se sentiu anormalmente eufórico, 'acelerado' ou muito irritado.",
+      "text": "Eu já tive pelo menos uma vez na vida um período de uma semana ou mais onde se sentiu anormalmente eufórico, 'acelerado' ou muito irritado.",
       "type": "specific",
       "targets": [
         "bipolar_1"
@@ -543,7 +543,7 @@
     },
     {
       "id": "q_aumento_energia",
-      "text": "Nesse período você teve um aumento exagerado de energia e agitação para fazer várias coisas ao mesmo tempo.",
+      "text": "Nesse período eu teve um aumento exagerado de energia e agitação para fazer várias coisas ao mesmo tempo.",
       "type": "specific",
       "targets": [
         "bipolar_1"
@@ -561,7 +561,7 @@
     },
     {
       "id": "q_autoestima_inflada",
-      "text": "Eu se sentiu com uma autoconfiança exagerada, grandiosidade ou achando que tinha talentos excepcionais.",
+      "text": "Eu me sentiu com uma autoconfiança exagerada, grandiosidade ou achando que tinha talentos excepcionais.",
       "type": "specific",
       "targets": [
         "bipolar_1"
@@ -570,7 +570,7 @@
     },
     {
       "id": "q_reducao_sono",
-      "text": "Nessa fase, você precisava dormir muito pouco (ex: 3 horas) e mesmo assim acordava descansado.",
+      "text": "Nessa fase, eu precisava dormir muito pouco (ex: 3 horas) e mesmo assim acordava descansado.",
       "type": "specific",
       "targets": [
         "bipolar_1"
@@ -615,7 +615,7 @@
     },
     {
       "id": "q_episodio_hipomaniaco",
-      "text": "Eu já teve um período mais curto (cerca de 4 dias) de euforia, mais energia e agitação, mas que não chegou a prejudicar gravemente sua vida ou te internar.",
+      "text": "Eu já tive um período mais curto (cerca de 4 dias) de mimforia, mais energia e agitação, mas que não chegou a prejudicar gravemente minha vida ou te internar.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -623,7 +623,7 @@
     },
     {
       "id": "q_episodio_depressivo",
-      "text": "Eu já teve épocas em que ficou profundamente triste e perdeu o interesse em tudo por semanas.",
+      "text": "Eu já tive épocas em que ficou profundamente triste e perdeu o interesse em tudo por semanas.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -631,7 +631,7 @@
     },
     {
       "id": "q_sem_mania",
-      "text": "Eu tenho certeza de que nunca teve um episódio grave de euforia ou agitação extrema que o fizesse perder o controle ou ir para o hospital.",
+      "text": "Eu tenho certeza de que nunca teve um episódio grave de mimforia ou agitação extrema que o fizesse perder o controle ou ir para o hospital.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -639,7 +639,7 @@
     },
     {
       "id": "q_hipomania_humor",
-      "text": "Naquela fase mais leve (de 4 dias), seu humor ficou mais eufórico ou irritado que o normal.",
+      "text": "Naquela fase mais leve (de 4 dias), meu humor ficou mais eufórico ou irritado que o normal.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -655,7 +655,7 @@
     },
     {
       "id": "q_hipomania_sem_prejuizo",
-      "text": "Essas mudanças não chegaram a causar danos graves na sua rotina, certo.",
+      "text": "Essas mudanças não chegaram a causar danos graves na minha rotina, certo.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -689,7 +689,7 @@
     },
     {
       "id": "q_depressao_secundarios",
-      "text": "Nesse período você sentiu muito cansaço, dificuldade para pensar, ou sentia-se inútil.",
+      "text": "Nesse período eu sentiu muito cansaço, dificuldade para pensar, ou sentia-se inútil.",
       "type": "specific",
       "targets": [
         "bipolar_2"
@@ -705,7 +705,7 @@
     },
     {
       "id": "q_perda_interesse",
-      "text": "Eu perdeu quase todo o interesse ou prazer nas atividades que antes gostava.",
+      "text": "Eu perdi quase todo o interesse ou prazer nas atividades que antes gostava.",
       "type": "specific",
       "targets": [
         "depressivo_maior"
@@ -721,7 +721,7 @@
     },
     {
       "id": "q_agitacao_retardo",
-      "text": "Eu se sente ou se move de forma muito agitada ou, pelo contrário, extremamente mais lento do que o seu normal.",
+      "text": "Eu me sente ou se move de forma muito agitada ou, pelo contrário, extremamente mais lento do que o seu normal.",
       "type": "specific",
       "targets": [
         "depressivo_maior"
@@ -761,7 +761,7 @@
     },
     {
       "id": "q_ansiedade_excessiva",
-      "text": "Eu tenho preocupações constantes e uma expectativa ruim de que o pior vai acontecer com várias coisas do dia a dia (trabalho, saúde, família), de uma forma que te deixa paralisado.",
+      "text": "Eu tenho preocupações constantes e uma expectativa ruim de que o pior vai acontecer com várias coisas do dia a dia (trabalho, saúde, família), de uma forma que me deixa paralisado.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -777,7 +777,7 @@
     },
     {
       "id": "q_ansiedade_incontrolavel",
-      "text": "Eu acha muito difícil conseguir controlar e afastar esses pensamentos de preocupação.",
+      "text": "Eu acho muito difícil conseguir controlar e afastar esses pensamentos de preocupação.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -793,7 +793,7 @@
     },
     {
       "id": "q_fatigabilidade",
-      "text": "Eu se cansa com facilidade por causa da ansiedade.",
+      "text": "Eu me cansa com facilidade por causa da ansiedade.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -809,7 +809,7 @@
     },
     {
       "id": "q_irritabilidade",
-      "text": "Eu se sente mais irritado e pavio curto com facilidade por causa da ansiedade.",
+      "text": "Eu me sente mais irritado e pavio curto com facilidade por causa da ansiedade.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -817,7 +817,7 @@
     },
     {
       "id": "q_tensao_muscular",
-      "text": "Eu sofre com tensão, rigidez ou dores musculares devido à ansiedade.",
+      "text": "Eu sofro com tensão, rigidez ou dores musculares devido à ansiedade.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -833,7 +833,7 @@
     },
     {
       "id": "q_ansiedade_sofrimento",
-      "text": "Essa ansiedade causa sofrimento claro ou prejudica bastante sua rotina.",
+      "text": "Essa ansiedade causa sofrimento claro ou prejudica bastante minha rotina.",
       "type": "specific",
       "targets": [
         "ansiedade_generalizada"
@@ -841,7 +841,7 @@
     },
     {
       "id": "q_ataques_panico",
-      "text": "Eu já teve ataques de pânico (medo repentino e intenso) que surgiram do nada, de forma inesperada e que se repetiram.",
+      "text": "Eu já tive ataques de pânico (medo repentino e intenso) que surgiram do nada, de forma inesperada e que se repetiram.",
       "type": "specific",
       "targets": [
         "panico"
@@ -867,7 +867,7 @@
     },
     {
       "id": "q_panico_fisico_coracao",
-      "text": "Na hora do ataque, você sente palpitações, coração acelerado ou batendo forte no peito.",
+      "text": "Na hora do ataque, eu sente palpitações, coração acelerado ou batendo forte no peito.",
       "type": "specific",
       "targets": [
         "panico"
@@ -876,7 +876,7 @@
     },
     {
       "id": "q_panico_fisico_tremor",
-      "text": "Nas crises, você tem suores exagerados, tremores ou abalos pelo corpo.",
+      "text": "Nas crises, eu tenho suores exagerados, tremores ou abalos pelo corpo.",
       "type": "specific",
       "targets": [
         "panico"
@@ -885,7 +885,7 @@
     },
     {
       "id": "q_panico_fisico_ar",
-      "text": "Durante a crise, você sente falta de ar repentina, sufocamento ou dificuldade de respirar.",
+      "text": "Durante a crise, eu sente falta de ar repentina, sufocamento ou dificuldade de respirar.",
       "type": "specific",
       "targets": [
         "panico"
@@ -894,7 +894,7 @@
     },
     {
       "id": "q_panico_fisico_dor",
-      "text": "Na crise, você sente dor ou aperto no peito, asfixia ou tontura.",
+      "text": "Na crise, eu sente dor ou aperto no peito, asfixia ou tontura.",
       "type": "specific",
       "targets": [
         "panico"
@@ -921,7 +921,7 @@
     },
     {
       "id": "q_panico_psicologico",
-      "text": "Nas crises, você tem a forte impressão de que está enlouquecendo, perdendo o controle ou de que vai morrer em instantes.",
+      "text": "Nas crises, eu tenho a forte impressão de que está enlouquecendo, perdendo o controle ou de que vai morrer em instantes.",
       "type": "specific",
       "targets": [
         "panico"
@@ -930,7 +930,7 @@
     },
     {
       "id": "q_obsessoes",
-      "text": "Eu é frequentemente invadido por pensamentos, imagens ou impulsos repetitivos que não quer ter e que causam ansiedade.",
+      "text": "Eu sou frequentemente invadido por pensamentos, imagens ou impulsos repetitivos que não quer ter e que causam ansiedade.",
       "type": "specific",
       "targets": [
         "toc"
@@ -938,7 +938,7 @@
     },
     {
       "id": "q_compulsoes",
-      "text": "Eu se sente forçado a executar comportamentos repetitivos ou rituais mentais para aliviar essa ansiedade.",
+      "text": "Eu me sente forçado a executar comportamentos repetitivos ou rituais mentais para aliviar essa ansiedade.",
       "type": "specific",
       "targets": [
         "toc"
@@ -947,7 +947,7 @@
     },
     {
       "id": "q_tentativa_ignorar_obsessoes",
-      "text": "Eu tenta afastar ou neutralizar esses pensamentos incômodos fazendo as ações repetitivas.",
+      "text": "Eu tento afastar ou neutralizar esses pensamentos incômodos fazendo as ações repetitivas.",
       "type": "specific",
       "targets": [
         "toc"
@@ -974,7 +974,7 @@
     },
     {
       "id": "q_toc_tempo",
-      "text": "Essas repetições ou pensamentos gastam muito do seu tempo (mais de uma hora por dia).",
+      "text": "Essas repetições ou pensamentos gastam muito do seu tenhopo (mais de uma hora por dia).",
       "type": "specific",
       "targets": [
         "toc"
@@ -983,7 +983,7 @@
     },
     {
       "id": "q_toc_sofrimento",
-      "text": "Esse problema causa sofrimento significativo ou atrapalha bastante a sua vida profissional ou social.",
+      "text": "Esse problema causa sofrimento significativo ou atrapalha bastante a minha vida profissional ou social.",
       "type": "specific",
       "targets": [
         "toc"
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "q_trauma_evitacao",
-      "text": "Eu faz um esforço constante para evitar memórias, lugares ou pessoas que o lembrem do trauma.",
+      "text": "Eu faço um esforço constante para evitar memórias, lugares ou pessoas que o lembrem do trauma.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1028,7 +1028,7 @@
     },
     {
       "id": "q_trauma_amnesia",
-      "text": "Eu perdeu a capacidade de se lembrar de alguma parte muito importante do trauma.",
+      "text": "Eu perdi a capacidade de se lembrar de alguma parte muito importante do trauma.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1037,7 +1037,7 @@
     },
     {
       "id": "q_trauma_crencas",
-      "text": "Eu mantém crenças fortemente negativas sobre você mesmo, sobre os outros ou sobre o mundo desde o trauma.",
+      "text": "Eu mantém crenças fortemente negativas sobre eu mesmo, sobre os outros ou sobre o mundo desde o trauma.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1046,7 +1046,7 @@
     },
     {
       "id": "q_trauma_reatividade",
-      "text": "Sua reação de alerta mudou e agora você é muito irritado, hipervigilante ou tem acessos de raiva constantes.",
+      "text": "Sua reação de alerta mudou e agora eu sou muito irritado, hipervigilante ou tem acessos de raiva constantes.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1055,7 +1055,7 @@
     },
     {
       "id": "q_trauma_imprudencia",
-      "text": "Desde o trauma você começou a agir de modo imprudente, com risco pessoal e atitudes autodestrutivas.",
+      "text": "Desde o trauma eu começou a agir de modo imprudente, com risco pessoal e atitudes autodestrutivas.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1064,7 +1064,7 @@
     },
     {
       "id": "q_trauma_sono_concentracao",
-      "text": "Desde o trauma você passou a ter problemas de concentração frequentes e sobressaltos exagerados.",
+      "text": "Desde o trauma eu passou a ter problemas de concentração frequentes e sobressaltos exagerados.",
       "type": "specific",
       "targets": [
         "tept"
@@ -1090,7 +1090,7 @@
     },
     {
       "id": "q_paranoide_intencoes",
-      "text": "Eu quase sempre enxerga as intenções dos outros como maldosas contra você.",
+      "text": "Eu quase sempre enxerga as intenções dos outros como maldosas contra eu.",
       "type": "specific",
       "targets": [
         "tp_paranoide"
@@ -1098,7 +1098,7 @@
     },
     {
       "id": "q_tp_inicio",
-      "text": "Seu padrão geral de ser e reagir se firmou de forma persistente logo no início da sua vida adulta.",
+      "text": "Seu padrão geral de ser e reagir se firmou de forma persistente logo no início da minha vida adulta.",
       "type": "specific",
       "targets": [
         "tp_paranoide",
@@ -1109,7 +1109,7 @@
     },
     {
       "id": "q_paranoide_explorado",
-      "text": "Eu suspeita muito, sem evidência concreta, de que está sendo explorado ou prejudicado pelas pessoas.",
+      "text": "Eu suspeito muito, sem evidência concreta, de que está sendo explorado ou prejudicado pelas pessoas.",
       "type": "specific",
       "targets": [
         "tp_paranoide"
@@ -1125,7 +1125,7 @@
     },
     {
       "id": "q_paranoide_confiar",
-      "text": "Eu tenho muito medo de confiar informações aos outros, achando que usarão isso contra você.",
+      "text": "Eu tenho muito medo de confiar informações aos outros, achando que usarão isso contra eu.",
       "type": "specific",
       "targets": [
         "tp_paranoide"
@@ -1141,7 +1141,7 @@
     },
     {
       "id": "q_paranoide_rancor",
-      "text": "Eu guarda rancor intensamente e tem grande dificuldade em perdoar qualquer ofensa.",
+      "text": "Eu guardo rancor intensamente e tem grande dificuldade em perdoar qualquer ofensa.",
       "type": "specific",
       "targets": [
         "tp_paranoide"
@@ -1157,7 +1157,7 @@
     },
     {
       "id": "q_paranoide_fidelidade",
-      "text": "Eu suspeita repetidamente, sem motivos reais, de que seu parceiro ou parceira está sendo infiel.",
+      "text": "Eu suspeito repetidamente, sem motivos reais, de que seu parceiro ou parceira está sendo infiel.",
       "type": "specific",
       "targets": [
         "tp_paranoide"
@@ -1197,7 +1197,7 @@
     },
     {
       "id": "q_esquizoide_sexo",
-      "text": "Eu possui pouco ou nenhum interesse em ter experiências sexuais com outras pessoas.",
+      "text": "Eu possuo pouco ou nenhum interesse em ter experiências sexuais com outras pessoas.",
       "type": "specific",
       "targets": [
         "tp_esquizoide"
@@ -1205,7 +1205,7 @@
     },
     {
       "id": "q_esquizoide_prazer",
-      "text": "Na grande maioria das vezes, você sente pouco ou nenhum prazer nas atividades gerais da vida.",
+      "text": "Na grande maioria das vezes, eu sente pouco ou nenhum prazer nas atividades gerais da vida.",
       "type": "specific",
       "targets": [
         "tp_esquizoide"
@@ -1213,7 +1213,7 @@
     },
     {
       "id": "q_esquizoide_amigos",
-      "text": "Sem contar seus parentes de primeiro grau, você não tem amigos próximos ou confidentes.",
+      "text": "Sem contar seus parentes de primeiro grau, eu não tenho amigos próximos ou confidentes.",
       "type": "specific",
       "targets": [
         "tp_esquizoide"
@@ -1245,7 +1245,7 @@
     },
     {
       "id": "q_antissocial_idade",
-      "text": "Atualmente, você tem 18 anos de idade ou mais.",
+      "text": "Atualmente, eu tenho 18 anos de idade ou mais.",
       "type": "specific",
       "targets": [
         "tp_antissocial"
@@ -1277,7 +1277,7 @@
     },
     {
       "id": "q_antissocial_impulsividade",
-      "text": "Eu age frequentemente por impulsividade e admite uma grande incapacidade de fazer planos para o futuro.",
+      "text": "Eu ajo frequentemente por impulsividade e admite uma grande incapacidade de fazer planos para o futuro.",
       "type": "specific",
       "targets": [
         "tp_antissocial"
@@ -1301,7 +1301,7 @@
     },
     {
       "id": "q_antissocial_irresponsabilidade",
-      "text": "Eu apresenta grande irresponsabilidade, não conseguindo manter um trabalho ou pagar suas dívidas.",
+      "text": "Eu apresento grande irresponsabilidade, não conseguindo manter um trabalho ou pagar suas dívidas.",
       "type": "specific",
       "targets": [
         "tp_antissocial"
@@ -1325,7 +1325,7 @@
     },
     {
       "id": "q_borderline_impulsividade",
-      "text": "Eu age por impulso em áreas que podem te prejudicar seriamente? (Ex: gastar dinheiro sem ter, comer compulsivamente até passar mal, abuso de álcool/drogas, sexo irresponsável ou direção perigosa).",
+      "text": "Eu ajo por impulso em áreas que podem te prejudicar seriamente? (Ex: gastar dinheiro sem ter, comer compulsivamente até passar mal, abuso de álcool/drogas, sexo irresponsável ou direção perigosa).",
       "type": "specific",
       "targets": [
         "tp_borderline"
@@ -1333,7 +1333,7 @@
     },
     {
       "id": "q_borderline_abandono",
-      "text": "Eu faz esforços desesperados e até exagerados para evitar ser abandonado, seja de forma real ou imaginária? (Ex: implorar, ameaçar se machucar ou entrar em pânico extremo se alguém demorar a responder ou desmarcar um encontro).",
+      "text": "Eu faço esforços desesperados e até exagerados para evitar ser abandonado, seja de forma real ou imaginária? (Ex: implorar, ameaçar se machucar ou entrar em pânico extremo se alguém demorar a responder ou desmarcar um encontro).",
       "type": "specific",
       "targets": [
         "tp_borderline"
@@ -1349,7 +1349,7 @@
     },
     {
       "id": "q_borderline_identidade",
-      "text": "Sua visão de quem você é e dos seus valores é muito instável e muda o tempo todo.",
+      "text": "Sua visão de quem eu sou e dos seus valores é muito instável e muda o tempo todo.",
       "type": "specific",
       "targets": [
         "tp_borderline"
@@ -1357,7 +1357,7 @@
     },
     {
       "id": "q_borderline_areas",
-      "text": "Eu age de forma impulsiva em coisas perigosas como gastos excessivos, sexo sem proteção, drogas ou direção imprudente.",
+      "text": "Eu ajo de forma impulsiva em coisas perigosas como gastos excessivos, sexo sem proteção, drogas ou direção imprudente.",
       "type": "specific",
       "targets": [
         "tp_borderline"
@@ -1421,7 +1421,7 @@
     },
     {
       "id": "q_narcisista_fantasias",
-      "text": "Eu se perde frequentemente em fantasias de sucesso ilimitado, poder, brilhantismo ou beleza ideal.",
+      "text": "Eu me perde frequentemente em fantasias de sucesso ilimitado, poder, brilhantismo ou beleza ideal.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
@@ -1429,7 +1429,7 @@
     },
     {
       "id": "q_narcisista_especial",
-      "text": "Eu acredita que é muito especial e que só pessoas de alto nível ou instituições importantes podem te compreender.",
+      "text": "Eu acredito que é muito especial e que só pessoas de alto nível ou instituições importantes podem me compreender.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
@@ -1437,7 +1437,7 @@
     },
     {
       "id": "q_narcisista_exigencia",
-      "text": "Eu exige que as pessoas te admirem excessivamente o tempo todo.",
+      "text": "Eu exijo que as pessoas te admirem excessivamente o tempo todo.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
@@ -1445,7 +1445,7 @@
     },
     {
       "id": "q_narcisista_privilegios",
-      "text": "Eu sinto que tem o direito de receber sempre um tratamento privilegiado, sem precisar fazer nada em troca.",
+      "text": "Eu sinto que tenho o direito de receber sempre um tratamento privilegiado, sem precisar fazer nada em troca.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
@@ -1461,7 +1461,7 @@
     },
     {
       "id": "q_narcisista_inveja",
-      "text": "Eu sinto muita inveja das outras pessoas ou acredita frequentemente que os outros têm muita inveja de você.",
+      "text": "Eu sinto muita inveja das outras pessoas ou acredita frequentemente que os outros têm muita inveja de mim.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
@@ -1469,7 +1469,7 @@
     },
     {
       "id": "q_evitativa_inibicao",
-      "text": "Eu evita ao máximo situações sociais, fazer novos amigos ou aceitar promoções no trabalho por um medo intenso de ser criticado, rejeitado ou passar vergonha.",
+      "text": "Eu evito ao máximo situações sociais, fazer novos amigos ou aceitar promoções no trabalho por um medo intenso de ser criticado, rejeitado ou passar vergonha.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1477,7 +1477,7 @@
     },
     {
       "id": "q_evitativa_inadequacao",
-      "text": "Eu convive com sentimentos profundos de que é inadequado ou inferior às outras pessoas.",
+      "text": "Eu convivo com sentimentos profundos de que é inadequado ou inferior às outras pessoas.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1485,7 +1485,7 @@
     },
     {
       "id": "q_evitativa_hipersensibilidade",
-      "text": "Eu é extremamente sensível a críticas ou à ideia de ser rejeitado por alguém.",
+      "text": "Eu sou extremamente sensível a críticas ou à ideia de ser rejeitado por alguém.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1493,7 +1493,7 @@
     },
     {
       "id": "q_evitativa_ocupacional",
-      "text": "Eu evita trabalhos que envolvam contato com pessoas por medo de ser criticado ou rejeitado.",
+      "text": "Eu evito trabalhos que envolvam contato com pessoas por medo de ser criticado ou rejeitado.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1501,7 +1501,7 @@
     },
     {
       "id": "q_evitativa_relutancia",
-      "text": "Eu se recusa a se envolver com as pessoas a menos que tenha certeza absoluta de que elas gostam de você.",
+      "text": "Eu me recusa a se envolver com as pessoas a menos que tenha certeza absoluta de que elas gostam de mim.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1509,7 +1509,7 @@
     },
     {
       "id": "q_evitativa_intimos",
-      "text": "Eu evita intimidade e relacionamentos próximos porque tem pavor de ser exposto, ridicularizado ou passar vergonha.",
+      "text": "Eu evito intimidade e relacionamentos próximos porque tem pavor de ser exposto, ridicularizado ou passar vergonha.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1517,7 +1517,7 @@
     },
     {
       "id": "q_evitativa_critica",
-      "text": "Sua preocupação em ser criticado ou rejeitado em interações sociais é quase uma obsessão constante.",
+      "text": "Minha preocupação em ser criticado ou rejeitado em interações sociais é quase uma obsessão constante.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1533,7 +1533,7 @@
     },
     {
       "id": "q_evitativa_visao_si",
-      "text": "Eu se vê constantemente como alguém socialmente inepto, sem encanto pessoal e inferior aos outros.",
+      "text": "Eu me vê constantemente como alguém socialmente inepto, sem encanto pessoal e inferior aos outros.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1541,7 +1541,7 @@
     },
     {
       "id": "q_evitativa_riscos",
-      "text": "Eu evita fortemente assumir qualquer risco ou iniciar novas atividades para não passar vergonha.",
+      "text": "Eu evito fortemente assumir qualquer risco ou iniciar novas atividades para não passar vergonha.",
       "type": "specific",
       "targets": [
         "tp_evitativa"
@@ -1557,7 +1557,7 @@
     },
     {
       "id": "q_tpoc_flexibilidade",
-      "text": "Seu controle e perfeccionismo excessivos fazem com que você perca a flexibilidade e a eficiência.",
+      "text": "Seu controle e perfeccionismo excessivos fazem com que eu perca a flexibilidade e a eficiência.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1565,7 +1565,7 @@
     },
     {
       "id": "q_tpoc_detalhes",
-      "text": "Eu se preocupa tanto com detalhes, regras, listas e horários que acaba esquecendo o objetivo principal da tarefa.",
+      "text": "Eu me preocupa tanto com detalhes, regras, listas e horários que acaba esquecendo o objetivo principal da tarefa.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1581,7 +1581,7 @@
     },
     {
       "id": "q_tpoc_trabalho",
-      "text": "Eu é excessivamente devotado ao trabalho e à produtividade, a ponto de abandonar suas amizades e momentos de lazer.",
+      "text": "Eu sou excessivamente devotado ao trabalho e à produtividade, a ponto de abandonar suas amizades e momentos de lazer.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1589,7 +1589,7 @@
     },
     {
       "id": "q_tpoc_moral",
-      "text": "Eu é extremamente rígido e inflexível no que diz respeito à moral, valores e questões éticas.",
+      "text": "Eu sou extremamente rígido e inflexível no que diz respeito à moral, valores e questões éticas.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1605,7 +1605,7 @@
     },
     {
       "id": "q_tpoc_delegar",
-      "text": "Eu se recusa a delegar tarefas ou trabalhar em grupo a não ser que as pessoas façam exatamente do seu jeito.",
+      "text": "Eu me recusa a delegar tarefas ou trabalhar em grupo a não ser que as pessoas façam exatamente do meu jeito.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1613,7 +1613,7 @@
     },
     {
       "id": "q_tpoc_avareza",
-      "text": "Eu é muito 'pão-duro' e adota um estilo avarento de lidar com o dinheiro, guardando excessivamente para evitar futuras catástrofes imaginárias.",
+      "text": "Eu sou muito 'pão-duro' e adota um estilo avarento de lidar com o dinheiro, guardando excessivamente para evitar futuras catástrofes imaginárias.",
       "type": "specific",
       "targets": [
         "tp_obsessivo_compulsiva"
@@ -1637,7 +1637,7 @@
     },
     {
       "id": "q_tdah_infancia",
-      "text": "Eu apresentava vários sintomas de distração ou agitação antes dos 12 anos de idade.",
+      "text": "Eu apresentova vários sintomas de distração ou agitação antes dos 12 anos de idade.",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "q_tdah_desatencao",
-      "text": "Eu tenho dificuldade crônica de manter o foco em tarefas não estimulantes? (Ex: comete erros por descuido, perde chaves/celular com frequência, sua mente 'viaja' ou parece que não escuta quando falam diretamente com você).",
+      "text": "Eu tenho dificuldade crônica de manter o foco em tarefas não estimulantes? (Ex: comete erros por descuido, perde chaves/celular com frequência, sua mente 'viaja' ou parece que não escuta quando falam diretamente com eu).",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1653,7 +1653,7 @@
     },
     {
       "id": "q_tdah_escuta",
-      "text": "As pessoas frequentemente reclamam que você parece não escutar quando falam com você ou que não segue as instruções até o fim.",
+      "text": "As pessoas frequentemente reclamam que eu parece não escutar quando falam comigo ou que não segue as instruções até o fim.",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1669,7 +1669,7 @@
     },
     {
       "id": "q_tdah_perdas",
-      "text": "Eu costumo perder coisas importantes para o dia a dia e é frequentemente esquecido na sua rotina.",
+      "text": "Eu costumo perder coisas importantes para o dia a dia e é frequentemente esquecido na minha rotina.",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1693,7 +1693,7 @@
     },
     {
       "id": "q_tdah_fala",
-      "text": "Eu fala excessivamente, responde impulsivamente antes de ouvir a pergunta toda ou interrompe muito as pessoas.",
+      "text": "Eu falo excessivamente, responde impulsivamente antes de ouvir a pergunta toda ou interrompe muito as pessoas.",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1701,7 +1701,7 @@
     },
     {
       "id": "q_tea_comunicacao",
-      "text": "Eu frequentemente acha difícil entender o tom de voz das pessoas, ironias, ou percebe que os outros te acham 'grosseiro(a)' ou 'estranho(a)' nas conversas, mesmo você não tendo a intenção.",
+      "text": "Eu frequentemente acha difícil entender o tom de voz das pessoas, ironias, ou percebe que os outros te acham 'grosseiro(a)' ou 'estranho(a)' nas conversas, mesmo eu não tendo a intenção.",
       "type": "specific",
       "targets": [
         "tea"
@@ -1741,7 +1741,7 @@
     },
     {
       "id": "q_tea_relacionamentos",
-      "text": "Eu acha muito difícil desenvolver, manter ou entender relacionamentos de amizade apropriados para a sua idade.",
+      "text": "Eu acho muito difícil desenvolver, manter ou entender relacionamentos de amizade apropriados para a sua idade.",
       "type": "specific",
       "targets": [
         "tea"
@@ -1765,7 +1765,7 @@
     },
     {
       "id": "q_tea_interesses",
-      "text": "Eu possui interesses altamente fixos e anormais na intensidade, focando obsessivamente em assuntos específicos.",
+      "text": "Eu possuo interesses altamente fixos e anormais na intensidade, focando obsessivamente em assuntos específicos.",
       "type": "specific",
       "targets": [
         "tea"
@@ -1773,7 +1773,7 @@
     },
     {
       "id": "q_tea_sensorial",
-      "text": "Eu é extremamente sensível (ou insensível) a sons, luzes, texturas de roupa ou certos cheiros no ambiente.",
+      "text": "Eu sou extremamente sensível (ou insensível) a sons, luzes, texturas de roupa ou certos cheiros no ambiente.",
       "type": "specific",
       "targets": [
         "tea"
@@ -1781,7 +1781,7 @@
     },
     {
       "id": "q_borderline_vazio_cronico",
-      "text": "Eu frequentemente sente um 'vazio' enorme por dentro, como se não soubesse quem você realmente é ou o que quer da vida.",
+      "text": "Eu frequentemente sente um 'vazio' enorme por dentro, como se não soubesse quem eu realmente sou ou o que quer da vida.",
       "type": "specific",
       "targets": [
         "tp_borderline"
@@ -1789,7 +1789,7 @@
     },
     {
       "id": "q_borderline_automutilacao",
-      "text": "Quando a dor emocional é muito forte, você já se cortou, se machucou de propósito ou ameaçou tirar a própria vida.",
+      "text": "Quando a dor emocional é muito forte, eu já me cortei, se machucou de propósito ou ameaçou tirar a própria vida.",
       "type": "specific",
       "targets": [
         "tp_borderline",
@@ -1806,7 +1806,7 @@
     },
     {
       "id": "q_tdah_paralisia",
-      "text": "Eu sofre de 'paralisia de tarefas', onde quer muito fazer algo importante mas seu cérebro simplesmente não deixa você começar.",
+      "text": "Eu sofro de 'paralisia de tarefas', onde quer muito fazer algo importante mas seu cérebro simplesmente não deixa eu começar.",
       "type": "specific",
       "targets": [
         "tdah"
@@ -1814,7 +1814,7 @@
     },
     {
       "id": "q_tea_masking",
-      "text": "Eu sinto que precisa criar um 'personagem' ou forçar contato visual para parecer normal perto das outras pessoas, o que te deixa exausto(a).",
+      "text": "Eu sinto que precisa criar um 'personagem' ou forçar contato visual para parecer normal perto das outras pessoas, o que me deixa exausto(a).",
       "type": "specific",
       "targets": [
         "tea"
@@ -1822,7 +1822,7 @@
     },
     {
       "id": "q_disforia_rejeicao",
-      "text": "Eu sinto uma dor emocional extrema e desproporcional quando acha que alguém te rejeitou, ignorou ou criticou.",
+      "text": "Eu sinto uma dor emocional extrema e desproporcional quando acha que alguém me rejeitou, ignorou ou criticou.",
       "type": "specific",
       "targets": [
         "tp_borderline",
@@ -1832,7 +1832,7 @@
     },
     {
       "id": "q_desregulacao_emocional",
-      "text": "Eu tenho muita dificuldade de controlar suas emoções, passando rapidamente de estar bem para acessos de raiva ou choro intenso.",
+      "text": "Eu tenho muita dificuldade de controlar minhas emoções, passando rapidamente de estar bem para acessos de raiva ou choro intenso.",
       "type": "umbrella",
       "targets": [
         "tp_borderline",
@@ -1844,7 +1844,7 @@
     },
     {
       "id": "q_isolamento_social_extremo",
-      "text": "Eu prefere ficar completamente isolado(a) e tem pouquíssimo ou nenhum interesse em interações sociais.",
+      "text": "Eu prefiro ficar completamente isolado(a) e tem pouquíssimo ou nenhum interesse em interações sociais.",
       "type": "umbrella",
       "targets": [
         "tp_esquizoide",
@@ -1866,7 +1866,7 @@
     },
     {
       "id": "q_rigidez_mudancas",
-      "text": "Eu sinto um desconforto ou irritação muito forte quando seus planos ou sua rotina precisam ser mudados de última hora.",
+      "text": "Eu sinto um desconforto ou irritação muito forte quando meus planos ou minha rotina precisam ser mudados de última hora.",
       "type": "specific",
       "targets": [
         "tea",
@@ -1876,7 +1876,7 @@
     },
     {
       "id": "q_hiperfoco_intenso",
-      "text": "Quando você se interessa por um assunto, você consegue passar horas ou dias obcecado por aquilo, esquecendo de comer ou dormir.",
+      "text": "Quando eu me interesso por um assunto, eu consigo passar horas ou dias obcecado por aquilo, esquecendo de comer ou dormir.",
       "type": "specific",
       "targets": [
         "tdah",
