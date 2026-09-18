@@ -3,40 +3,40 @@
 {% block content %}
 
 {% if show_log and top_disorders %}
-<div class="card p-3 mb-4">
-    <h5 class="text-dark">🏆 LEADERBOARD (Top 5 Diagnósticos):</h5>
-    <ul class="list-unstyled mb-0">
+<div class="card p-2 mb-3">
+    <h6 class="text-dark fw-bold mb-1" style="font-size: clamp(0.85rem, 3vw, 1rem);">🏆 LEADERBOARD (Top 5 Diagnósticos):</h6>
+    <ul class="list-unstyled mb-0" style="font-size: clamp(0.7rem, 2.5vw, 0.9rem);">
         {% for d in top_disorders %}
-        <li>{{ d.rank }}. {{ d.name }} <span class="float-end text-primary">({{ d.score }})</span></li>
+        <li class="py-0">{{ d.rank }}. {{ d.name }} <span class="float-end text-primary">({{ d.score }})</span></li>
         {% endfor %}
     </ul>
 </div>
 {% endif %}
 
-<div class="card p-4">
-    <h5 class="mb-4">Pergunta [{{ question_count }}/{{ max_questions }}]:</h5>
-    <p class="fs-5 mb-5">{{ question.text }}</p>
+<div class="card p-3">
+    <h6 class="mb-2" style="font-size: clamp(0.9rem, 3vw, 1.1rem);">Pergunta [{{ question_count }}/{{ max_questions }}]:</h6>
+    <p class="mb-3 fw-bold" style="font-size: clamp(1rem, 4vw, 1.25rem);">{{ question.text }}</p>
     
-    <div class="d-flex flex-nowrap justify-content-center w-100 gap-2" id="options-container">
+    <div class="d-flex flex-nowrap justify-content-center w-100 gap-1" id="options-container">
         <!-- These IDs and data-weights map to the 5 standard options -->
-        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.0">
-            <div class="fw-bold small pb-1">[1]</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-1" style="flex: 1 1 0; font-size: clamp(0.6rem, 2vw, 0.9rem); line-height: 1.1;" data-weight="0.0">
+            <div class="fw-bold pb-1" style="font-size: 0.8em;">[1]</div>
             <span class="label">Discordo Totalmente</span>
         </div>
-        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.25">
-            <div class="fw-bold small pb-1">[2]</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-1" style="flex: 1 1 0; font-size: clamp(0.6rem, 2vw, 0.9rem); line-height: 1.1;" data-weight="0.25">
+            <div class="fw-bold pb-1" style="font-size: 0.8em;">[2]</div>
             <span class="label">Discordo</span>
         </div>
-        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.5">
-            <div class="fw-bold small pb-1">[3]</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-1" style="flex: 1 1 0; font-size: clamp(0.6rem, 2vw, 0.9rem); line-height: 1.1;" data-weight="0.5">
+            <div class="fw-bold pb-1" style="font-size: 0.8em;">[3]</div>
             <span class="label">Não Sei</span>
         </div>
-        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="0.75">
-            <div class="fw-bold small pb-1">[4]</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-1" style="flex: 1 1 0; font-size: clamp(0.6rem, 2vw, 0.9rem); line-height: 1.1;" data-weight="0.75">
+            <div class="fw-bold pb-1" style="font-size: 0.8em;">[4]</div>
             <span class="label">Concordo um pouco</span>
         </div>
-        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-2" style="flex: 1 1 0;" data-weight="1.0">
-            <div class="fw-bold small pb-1">[5]</div>
+        <div class="btn option-btn d-flex flex-column justify-content-center text-wrap px-1 py-1" style="flex: 1 1 0; font-size: clamp(0.6rem, 2vw, 0.9rem); line-height: 1.1;" data-weight="1.0">
+            <div class="fw-bold pb-1" style="font-size: 0.8em;">[5]</div>
             <span class="label">Concordo Totalmente</span>
         </div>
     </div>
@@ -48,7 +48,7 @@
     <input type="hidden" name="weight" id="weight-input">
 </form>
 
-<div class="text-center mt-4 text-muted">
+<div class="text-center mt-3 text-muted" style="font-size: clamp(0.7rem, 2vw, 0.9rem);">
     <small>Use as <b>setas (← →)</b> ou números <b>(1-5)</b> e <b>Enter/Espaço</b> para selecionar, ou simplesmente <b>clique com o mouse</b>.</small>
 </div>
 
