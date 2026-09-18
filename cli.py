@@ -21,9 +21,9 @@ def render_screen(engine: InferenceEngine, prompt_text: str, menu_str: str):
     sys.stdout.write("\033[2J\033[H")
     
     # Cabeçalho
-    print("=" * 70)
-    print("🧠 Akinator DSM-5 - Inferência Probabilística (v7.0)")
-    print("=" * 70)
+    print("=" * 80)
+    print("🧠 Akinator DSM-5 - Inferência Probabilística")
+    print("=" * 80)
     
     # Leaderboard (Top 5)
     print("  🏆 LEADERBOARD (Top 5 Diagnósticos):")
