@@ -1,0 +1,542 @@
+[
+  {
+    "q_psicotico_umbrella": "Eu tenho visto, ouvido ou acreditado em coisas que as outras pessoas dizem não ser reais, ou senti minha mente muito confusa ultimamente."
+  },
+  {
+    "q_humor_umbrella": "Eu já tive períodos longos de tristeza profunda ou épocas em que me senti exageradamente eufórico, acelerado e sem precisar dormir."
+  },
+  {
+    "q_ansiedade_umbrella": "Eu sofro frequentemente com preocupações exageradas, ansiedade intensa constante ou crises súbitas de pânico."
+  },
+  {
+    "q_personalidade_umbrella": "Eu percebo que, desde o início da fase adulta, o meu jeito de ser, agir e me relacionar sempre trouxe muito sofrimento ou problemas repetidos com outras pessoas."
+  },
+  {
+    "q_neurodesenv_umbrella": "Desde a minha infância, eu apresento muita dificuldade de atenção, agitação física intensa ou dificuldades marcantes de se comunicar e fazer amizades."
+  },
+  {
+    "q_trauma_umbrella": "Eu passou por um evento traumático grave ou risco de vida e, desde então, revive isso em pesadelos ou evita lembrar do que aconteceu."
+  },
+  {
+    "q_toc_umbrella": "Eu sofro com pensamentos ruins que não saem da cabeça e sente necessidade de realizar repetidamente certas ações ou rituais para aliviar essa aflição."
+  },
+  {
+    "q_delirios": "Eu costumo ter crenças muito fixas e inflexíveis, mesmo quando as outras pessoas dizem e provam ser irreais? (Ex: achar que está sendo perseguido, que há complôs contra eu, ou que consegue ler a mente dos outros)."
+  },
+  {
+    "q_alucinacoes": "Eu costumo ouvir vozes, enxergar coisas ou sentir sensações que as outras pessoas não percebem."
+  },
+  {
+    "q_discurso_desorganizado": "As pessoas frequentemente dizem que o que eu fala parece muito confuso, incoerente ou que eu muda de assunto de forma estranha."
+  },
+  {
+    "q_comportamento_desorganizado": "Eu tenho tido comportamentos muito estranhos, grande agitação ou momentos em que fica completamente paralisado e sem reação."
+  },
+  {
+    "q_psicotico_duracao_breve": "Esses episódios de ouvir vozes ou delírios duraram muito pouco tempo, entre 1 dia e 1 mês, e depois eu voltou totalmente ao normal."
+  },
+  {
+    "q_psicotico_retorno_normal": "Eu me recuperou totalmente após esses episódios."
+  },
+  {
+    "q_sintomas_negativos": "Eu tenho sentido uma enorme falta de vontade de fazer qualquer coisa e percebe que seu rosto ou voz estão sem expressão."
+  },
+  {
+    "q_psicotico_duracao_media": "Esses sintomas estranhos duraram de 1 a 6 meses."
+  },
+  {
+    "q_psicotico_queda_funcionamento": "Desde que os problemas começaram, sua capacidade de trabalhar, estudar ou se relacionar caiu drasticamente."
+  },
+  {
+    "q_psicotico_duracao_longa": "Esses sintomas ou o comportamento estranho já persistem de forma contínua por mais de 6 meses."
+  },
+  {
+    "q_episodio_maniaco": "Eu já tive pelo menos uma vez na vida um período de uma semana ou mais onde se sentiu anormalmente eufórico, 'acelerado' ou muito irritado."
+  },
+  {
+    "q_aumento_energia": "Nesse período eu teve um aumento exagerado de energia e agitação para fazer várias coisas ao mesmo tempo."
+  },
+  {
+    "q_mania_duracao": "A euforia e aceleração persistiram pela maior parte do dia durante toda aquela semana."
+  },
+  {
+    "q_autoestima_inflada": "Eu me sentiu com uma autoconfiança exagerada, grandiosidade ou achando que tinha talentos excepcionais."
+  },
+  {
+    "q_reducao_sono": "Nessa fase, eu precisava dormir muito pouco (ex: 3 horas) e mesmo assim acordava descansado."
+  },
+  {
+    "q_loquacidade": "Eu falava muito mais e mais rápido do que o normal, quase sem conseguir parar."
+  },
+  {
+    "q_fuga_ideias": "Eu sentia que seus pensamentos estavam voando ou acelerados a ponto de se atropelarem."
+  },
+  {
+    "q_distratibilidade": "Sua atenção desviava facilmente para qualquer estímulo à sua volta."
+  },
+  {
+    "q_risco_excessivo": "Eu tomou atitudes por impulso com grandes riscos, como compras exageradas, sexo descuidado ou investimentos insensatos."
+  },
+  {
+    "q_episodio_hipomaniaco": "Eu já tive um período mais curto (cerca de 4 dias) de mimforia, mais energia e agitação, mas que não chegou a prejudicar gravemente minha vida ou te internar."
+  },
+  {
+    "q_episodio_depressivo": "Eu já tive épocas em que ficou profundamente triste e perdeu o interesse em tudo por semanas."
+  },
+  {
+    "q_sem_mania": "Eu tenho certeza de que nunca teve um episódio grave de mimforia ou agitação extrema que o fizesse perder o controle ou ir para o hospital."
+  },
+  {
+    "q_hipomania_humor": "Naquela fase mais leve (de 4 dias), meu humor ficou mais eufórico ou irritado que o normal."
+  },
+  {
+    "q_hipomania_energia": "Sua energia e ritmo de atividades ficaram visivelmente mais intensos naqueles dias."
+  },
+  {
+    "q_hipomania_sem_prejuizo": "Essas mudanças não chegaram a causar danos graves na minha rotina, certo."
+  },
+  {
+    "q_depressao_humor": "Na fase triste, o desânimo ocorria a maior parte do dia, quase todos os dias."
+  },
+  {
+    "q_peso_apetite": "Houve alterações muito fortes no seu peso ou no apetite sem motivo óbvio."
+  },
+  {
+    "q_insonia_hipersonia": "Eu teve muita dificuldade para dormir ou sentia necessidade de dormir quase o dia todo."
+  },
+  {
+    "q_depressao_secundarios": "Nesse período eu sentiu muito cansaço, dificuldade para pensar, ou sentia-se inútil."
+  },
+  {
+    "q_humor_deprimido": "Eu tenho se sentido triste, vazio ou sem esperança na maior parte do dia, quase todos os dias."
+  },
+  {
+    "q_perda_interesse": "Eu perdi quase todo o interesse ou prazer nas atividades que antes gostava."
+  },
+  {
+    "q_depressao_duracao": "Essa tristeza forte e falta de energia já duram no mínimo 2 semanas seguidas."
+  },
+  {
+    "q_agitacao_retardo": "Eu me sente ou se move de forma muito agitada ou, pelo contrário, extremamente mais lento do que o seu normal."
+  },
+  {
+    "q_fadiga": "Eu sinto um cansaço frequente ou perda de energia em quase todos os dias."
+  },
+  {
+    "q_inutilidade_culpa": "Eu tenho carregado uma culpa muito exagerada ou se sentido completamente inútil."
+  },
+  {
+    "q_concentracao_diminuida": "Sua capacidade de raciocinar, focar ou tomar decisões piorou muito nesse período."
+  },
+  {
+    "q_ideacao_suicida": "Eu tenho pensado repetidamente em morte, ou tem ideias/planos de tirar a própria vida."
+  },
+  {
+    "q_ansiedade_excessiva": "Eu tenho preocupações constantes e uma expectativa ruim de que o pior vai acontecer com várias coisas do dia a dia (trabalho, saúde, família), de uma forma que me deixa paralisado."
+  },
+  {
+    "q_ansiedade_duracao": "Essa ansiedade e preocupação acontecem na maioria dos dias há pelo menos 6 meses."
+  },
+  {
+    "q_ansiedade_incontrolavel": "Eu acho muito difícil conseguir controlar e afastar esses pensamentos de preocupação."
+  },
+  {
+    "q_inquieta_nervos": "Eu costumo se sentir impaciente, inquieto ou com os nervos à flor da pele."
+  },
+  {
+    "q_fatigabilidade": "Eu me cansa com facilidade por causa da ansiedade."
+  },
+  {
+    "q_branco_mente": "A preocupação faz com que sua mente fique com 'branco' ou com dificuldade de concentração."
+  },
+  {
+    "q_irritabilidade": "Eu me sente mais irritado e pavio curto com facilidade por causa da ansiedade."
+  },
+  {
+    "q_tensao_muscular": "Eu sofro com tensão, rigidez ou dores musculares devido à ansiedade."
+  },
+  {
+    "q_sono_ansioso": "Eu tenho problemas para pegar no sono, acorda no meio da noite ou acorda cansado por causa da apreensão."
+  },
+  {
+    "q_ansiedade_sofrimento": "Essa ansiedade causa sofrimento claro ou prejudica bastante minha rotina."
+  },
+  {
+    "q_ataques_panico": "Eu já tive ataques de pânico (medo repentino e intenso) que surgiram do nada, de forma inesperada e que se repetiram."
+  },
+  {
+    "q_medo_novos_ataques": "Eu fica pelo menos 1 mês sentindo muito medo de ter uma nova crise de pânico a qualquer momento."
+  },
+  {
+    "q_evitacao_panico": "Eu mudou a forma como vive (como evitar lugares ou situações) por receio de que aconteça outra crise."
+  },
+  {
+    "q_panico_fisico_coracao": "Na hora do ataque, eu sente palpitações, coração acelerado ou batendo forte no peito."
+  },
+  {
+    "q_panico_fisico_tremor": "Nas crises, eu tenho suores exagerados, tremores ou abalos pelo corpo."
+  },
+  {
+    "q_panico_fisico_ar": "Durante a crise, eu sente falta de ar repentina, sufocamento ou dificuldade de respirar."
+  },
+  {
+    "q_panico_fisico_dor": "Na crise, eu sente dor ou aperto no peito, asfixia ou tontura."
+  },
+  {
+    "q_panico_fisico_enjoo": "Na hora da crise, ocorrem enjoos, desconforto abdominal ou uma sensação de desmaio."
+  },
+  {
+    "q_panico_fisico_calafrio": "Eu tenho calafrios, ondas de calor ou formigamentos pelo corpo no momento do ataque."
+  },
+  {
+    "q_panico_psicologico": "Nas crises, eu tenho a forte impressão de que está enlouquecendo, perdendo o controle ou de que vai morrer em instantes."
+  },
+  {
+    "q_obsessoes": "Eu sou frequentemente invadido por pensamentos, imagens ou impulsos repetitivos que não quer ter e que causam ansiedade."
+  },
+  {
+    "q_compulsoes": "Eu me sente forçado a executar comportamentos repetitivos ou rituais mentais para aliviar essa ansiedade."
+  },
+  {
+    "q_tentativa_ignorar_obsessoes": "Eu tento afastar ou neutralizar esses pensamentos incômodos fazendo as ações repetitivas."
+  },
+  {
+    "q_compulsoes_objetivo": "A principal intenção desses rituais é aliviar a sua angústia ou evitar magicamente que algo ruim aconteça."
+  },
+  {
+    "q_compulsoes_excessivas": "Suas ações para neutralizar os pensamentos são exageradas ou não têm uma ligação lógica com o perigo."
+  },
+  {
+    "q_toc_tempo": "Essas repetições ou pensamentos gastam muito do seu tenhopo (mais de uma hora por dia)."
+  },
+  {
+    "q_toc_sofrimento": "Esse problema causa sofrimento significativo ou atrapalha bastante a minha vida profissional ou social."
+  },
+  {
+    "q_trauma_exposicao": "Eu esteve exposto, presenciou ou descobriu sobre alguma ameaça de morte real, lesão grave ou violência sexual."
+  },
+  {
+    "q_trauma_intrusao": "Eu revive o trauma através de lembranças ruins inesperadas, flashbacks ou pesadelos."
+  },
+  {
+    "q_trauma_evitacao": "Eu faço um esforço constante para evitar memórias, lugares ou pessoas que o lembrem do trauma."
+  },
+  {
+    "q_trauma_cognicao": "Eu notou alterações negativas nos seus pensamentos e no humor em relação a si próprio e ao mundo após o evento."
+  },
+  {
+    "q_trauma_amnesia": "Eu perdi a capacidade de se lembrar de alguma parte muito importante do trauma."
+  },
+  {
+    "q_trauma_crencas": "Eu mantém crenças fortemente negativas sobre eu mesmo, sobre os outros ou sobre o mundo desde o trauma."
+  },
+  {
+    "q_trauma_reatividade": "Sua reação de alerta mudou e agora eu sou muito irritado, hipervigilante ou tem acessos de raiva constantes."
+  },
+  {
+    "q_trauma_imprudencia": "Desde o trauma eu começou a agir de modo imprudente, com risco pessoal e atitudes autodestrutivas."
+  },
+  {
+    "q_trauma_sono_concentracao": "Desde o trauma eu passou a ter problemas de concentração frequentes e sobressaltos exagerados."
+  },
+  {
+    "q_trauma_duracao": "A duração dessas lembranças ruins, da irritabilidade e do sofrimento dura há mais de 1 mês."
+  },
+  {
+    "q_paranoide_desconfianca": "Eu costumo desconfiar das pessoas no geral, muitas vezes sem provas, acreditando que querem enganá-lo."
+  },
+  {
+    "q_paranoide_intencoes": "Eu quase sempre enxerga as intenções dos outros como maldosas contra eu."
+  },
+  {
+    "q_tp_inicio": "Seu padrão geral de ser e reagir se firmou de forma persistente logo no início da minha vida adulta."
+  },
+  {
+    "q_paranoide_explorado": "Eu suspeito muito, sem evidência concreta, de que está sendo explorado ou prejudicado pelas pessoas."
+  },
+  {
+    "q_paranoide_lealdade": "Eu tenho dúvidas injustificadas sobre a lealdade ou a confiança dos seus amigos."
+  },
+  {
+    "q_paranoide_confiar": "Eu tenho muito medo de confiar informações aos outros, achando que usarão isso contra eu."
+  },
+  {
+    "q_paranoide_significados": "Eu costumo interpretar críticas humilhantes ou ameaças ocultas em observações normais do dia a dia."
+  },
+  {
+    "q_paranoide_rancor": "Eu guardo rancor intensamente e tem grande dificuldade em perdoar qualquer ofensa."
+  },
+  {
+    "q_paranoide_ataques": "Eu sinto que seu caráter está sempre sendo atacado e reage rapidamente com raiva ou agressão."
+  },
+  {
+    "q_paranoide_fidelidade": "Eu suspeito repetidamente, sem motivos reais, de que seu parceiro ou parceira está sendo infiel."
+  },
+  {
+    "q_esquizoide_distanciamento": "Eu mantém um padrão amplo de distanciamento e isolamento das relações sociais."
+  },
+  {
+    "q_esquizoide_restricao_afeto": "Eu tenho uma faixa muito limitada para expressar emoções, parecendo frio ou distante para os outros."
+  },
+  {
+    "q_esquizoide_desejo_relacoes": "Eu sinto que realmente não deseja e não tem vontade de ter relações íntimas ou ser próximo da família."
+  },
+  {
+    "q_esquizoide_atividades": "Eu quase sempre escolhe atividades que pode fazer completamente sozinho."
+  },
+  {
+    "q_esquizoide_sexo": "Eu possuo pouco ou nenhum interesse em ter experiências sexuais com outras pessoas."
+  },
+  {
+    "q_esquizoide_prazer": "Na grande maioria das vezes, eu sente pouco ou nenhum prazer nas atividades gerais da vida."
+  },
+  {
+    "q_esquizoide_amigos": "Sem contar seus parentes de primeiro grau, eu não tenho amigos próximos ou confidentes."
+  },
+  {
+    "q_esquizoide_indiferenca": "Eu parece ser totalmente indiferente tanto aos elogios quanto às críticas dos outros."
+  },
+  {
+    "q_esquizoide_frieza": "Eu comumente demonstra frieza emocional, distanciamento contínuo e afeto vazio."
+  },
+  {
+    "q_antissocial_violacao": "Eu tenho um padrão de desconsiderar e violar os direitos das outras pessoas? (Ex: mentir repetidamente para obter vantagem, agir impulsivamente sem ligar para a segurança dos outros, ou ter comportamentos que são motivos de prisão)."
+  },
+  {
+    "q_antissocial_idade": "Atualmente, eu tenho 18 anos de idade ou mais."
+  },
+  {
+    "q_antissocial_inicio": "Eu tenho histórico de problemas graves de conduta, agressividade ou desrespeito às regras que começou antes dos 15 anos."
+  },
+  {
+    "q_antissocial_normas": "Eu fracassa frequentemente em se adequar às normas sociais e legais, correndo risco de ser preso."
+  },
+  {
+    "q_antissocial_falsidade": "Eu costumo mentir repetidamente, usar apelidos falsos ou enganar os outros para obter vantagem pessoal."
+  },
+  {
+    "q_antissocial_impulsividade": "Eu ajo frequentemente por impulsividade e admite uma grande incapacidade de fazer planos para o futuro."
+  },
+  {
+    "q_antissocial_agressividade": "Sua vida é marcada por irritabilidade e agressividade constantes, envolvendo brigas ou agressões físicas."
+  },
+  {
+    "q_antissocial_seguranca": "Eu frequentemente desrespeita de maneira imprudente a sua própria segurança ou a das outras pessoas."
+  },
+  {
+    "q_antissocial_irresponsabilidade": "Eu apresento grande irresponsabilidade, não conseguindo manter um trabalho ou pagar suas dívidas."
+  },
+  {
+    "q_antissocial_remorso": "Eu não sente nenhum remorso ou consegue se justificar facilmente após ferir, roubar ou enganar alguém."
+  },
+  {
+    "q_borderline_instabilidade": "Meu humor muda de forma muito brusca e intensa no mesmo dia, indo de uma alegria normal para uma raiva, ansiedade ou tristeza paralisante em questão de horas."
+  },
+  {
+    "q_borderline_impulsividade": "Eu ajo por impulso em áreas que podem te prejudicar seriamente? (Ex: gastar dinheiro sem ter, comer compulsivamente até passar mal, abuso de álcool/drogas, sexo irresponsável ou direção perigosa)."
+  },
+  {
+    "q_borderline_abandono": "Eu faço esforços desesperados e até exagerados para evitar ser abandonado, seja de forma real ou imaginária? (Ex: implorar, ameaçar se machucar ou entrar em pânico extremo se alguém demorar a responder ou desmarcar um encontro)."
+  },
+  {
+    "q_borderline_relacionamentos": "Seus relacionamentos costumam ir rapidamente da idealização perfeita para a desvalorização total."
+  },
+  {
+    "q_borderline_identidade": "Sua visão de quem eu sou e dos seus valores é muito instável e muda o tempo todo."
+  },
+  {
+    "q_borderline_areas": "Eu ajo de forma impulsiva em coisas perigosas como gastos excessivos, sexo sem proteção, drogas ou direção imprudente."
+  },
+  {
+    "q_borderline_suicidio": "Eu tenho um histórico de comportamento, ameaças ou tentativas de suicídio, ou costuma se automutilar."
+  },
+  {
+    "q_borderline_vazio": "Eu costumo lidar com um sentimento crônico e profundo de vazio existencial."
+  },
+  {
+    "q_borderline_raiva": "Eu tenho crises de raiva intensa que são difíceis de controlar e muitas vezes inadequadas para a situação."
+  },
+  {
+    "q_narcisista_grandiosidade": "Eu frequentemente se sente muito superior às outras pessoas, com uma grande fantasia de ser o melhor."
+  },
+  {
+    "q_narcisista_admiracao": "Eu tenho uma necessidade constante e muito grande de que as pessoas te admirem e te reconheçam."
+  },
+  {
+    "q_narcisista_empatia": "Eu tenho dificuldade de se colocar no lugar do outro e de sentir empatia pelos sentimentos alheios."
+  },
+  {
+    "q_narcisista_autoimportancia": "Eu tenho um senso de grandeza, exagerando constantemente suas conquistas e talentos para parecer superior."
+  },
+  {
+    "q_narcisista_fantasias": "Eu me perde frequentemente em fantasias de sucesso ilimitado, poder, brilhantismo ou beleza ideal."
+  },
+  {
+    "q_narcisista_especial": "Eu acredito que é muito especial e que só pessoas de alto nível ou instituições importantes podem me compreender."
+  },
+  {
+    "q_narcisista_exigencia": "Eu exijo que as pessoas te admirem excessivamente o tempo todo."
+  },
+  {
+    "q_narcisista_privilegios": "Eu sinto que tenho o direito de receber sempre um tratamento privilegiado, sem precisar fazer nada em troca."
+  },
+  {
+    "q_narcisista_exploracao": "Eu costumo explorar as pessoas e tirar vantagem delas para atingir os seus próprios objetivos."
+  },
+  {
+    "q_narcisista_inveja": "Eu sinto muita inveja das outras pessoas ou acredita frequentemente que os outros têm muita inveja de mim."
+  },
+  {
+    "q_evitativa_inibicao": "Eu evito ao máximo situações sociais, fazer novos amigos ou aceitar promoções no trabalho por um medo intenso de ser criticado, rejeitado ou passar vergonha."
+  },
+  {
+    "q_evitativa_inadequacao": "Eu convivo com sentimentos profundos de que é inadequado ou inferior às outras pessoas."
+  },
+  {
+    "q_evitativa_hipersensibilidade": "Eu sou extremamente sensível a críticas ou à ideia de ser rejeitado por alguém."
+  },
+  {
+    "q_evitativa_ocupacional": "Eu evito trabalhos que envolvam contato com pessoas por medo de ser criticado ou rejeitado."
+  },
+  {
+    "q_evitativa_relutancia": "Eu me recusa a se envolver com as pessoas a menos que tenha certeza absoluta de que elas gostam de mim."
+  },
+  {
+    "q_evitativa_intimos": "Eu evito intimidade e relacionamentos próximos porque tem pavor de ser exposto, ridicularizado ou passar vergonha."
+  },
+  {
+    "q_evitativa_critica": "Minha preocupação em ser criticado ou rejeitado em interações sociais é quase uma obsessão constante."
+  },
+  {
+    "q_evitativa_novas_situacoes": "Eu tenho dificuldade de entrar em novas situações ou lugares por conta de sentimentos de inaptidão e inadequação."
+  },
+  {
+    "q_evitativa_visao_si": "Eu me vê constantemente como alguém socialmente inepto, sem encanto pessoal e inferior aos outros."
+  },
+  {
+    "q_evitativa_riscos": "Eu evito fortemente assumir qualquer risco ou iniciar novas atividades para não passar vergonha."
+  },
+  {
+    "q_tpoc_ordem": "Eu tenho uma preocupação exagerada com a ordem, organização e perfeccionismo em tudo."
+  },
+  {
+    "q_tpoc_flexibilidade": "Seu controle e perfeccionismo excessivos fazem com que eu perca a flexibilidade e a eficiência."
+  },
+  {
+    "q_tpoc_detalhes": "Eu me preocupa tanto com detalhes, regras, listas e horários que acaba esquecendo o objetivo principal da tarefa."
+  },
+  {
+    "q_tpoc_perfeccionismo": "Seu perfeccionismo é tão extremo que muitas vezes te impede de finalizar ou entregar os trabalhos no prazo."
+  },
+  {
+    "q_tpoc_trabalho": "Eu sou excessivamente devotado ao trabalho e à produtividade, a ponto de abandonar suas amizades e momentos de lazer."
+  },
+  {
+    "q_tpoc_moral": "Eu sou extremamente rígido e inflexível no que diz respeito à moral, valores e questões éticas."
+  },
+  {
+    "q_tpoc_descartar": "Eu tenho muita dificuldade ou é incapaz de jogar fora objetos velhos e sem valor, mesmo que não tenham significado afetivo."
+  },
+  {
+    "q_tpoc_delegar": "Eu me recusa a delegar tarefas ou trabalhar em grupo a não ser que as pessoas façam exatamente do meu jeito."
+  },
+  {
+    "q_tpoc_avareza": "Eu sou muito 'pão-duro' e adota um estilo avarento de lidar com o dinheiro, guardando excessivamente para evitar futuras catástrofes imaginárias."
+  },
+  {
+    "q_tdah_padrao": "Eu costumo deixar tarefas pela metade, pular de um interesse para outro rapidamente e lutar muito contra o tédio para terminar obrigações diárias (como ler um texto longo ou organizar o quarto)."
+  },
+  {
+    "q_tdah_prejuizo": "Esses sintomas de desatenção ou hiperatividade prejudicam fortemente seu rendimento no trabalho, estudos ou relacionamentos."
+  },
+  {
+    "q_tdah_infancia": "Eu apresentova vários sintomas de distração ou agitação antes dos 12 anos de idade."
+  },
+  {
+    "q_tdah_desatencao": "Eu tenho dificuldade crônica de manter o foco em tarefas não estimulantes? (Ex: comete erros por descuido, perde chaves/celular com frequência, sua mente 'viaja' ou parece que não escuta quando falam diretamente com eu)."
+  },
+  {
+    "q_tdah_escuta": "As pessoas frequentemente reclamam que eu parece não escutar quando falam comigo ou que não segue as instruções até o fim."
+  },
+  {
+    "q_tdah_organizacao": "Eu tenho muita dificuldade em se organizar ou evita tarefas que exigem esforço mental prolongado."
+  },
+  {
+    "q_tdah_perdas": "Eu costumo perder coisas importantes para o dia a dia e é frequentemente esquecido na minha rotina."
+  },
+  {
+    "q_tdah_agita": "Eu sinto necessidade de batucar, balançar as pernas ou levantar da cadeira em situações onde deveria ficar parado."
+  },
+  {
+    "q_tdah_corre": "Eu tenho uma sensação constante de inquietude, como se estivesse sempre ligado por um motor."
+  },
+  {
+    "q_tdah_fala": "Eu falo excessivamente, responde impulsivamente antes de ouvir a pergunta toda ou interrompe muito as pessoas."
+  },
+  {
+    "q_tea_comunicacao": "Eu frequentemente acha difícil entender o tom de voz das pessoas, ironias, ou percebe que os outros te acham 'grosseiro(a)' ou 'estranho(a)' nas conversas, mesmo eu não tendo a intenção."
+  },
+  {
+    "q_tea_padroes": "Eu tenho comportamentos, rotinas ou interesses muito repetitivos e restritos."
+  },
+  {
+    "q_tea_infancia": "Essas dificuldades sociais ou comportamentos restritos estão presentes desde a sua infância."
+  },
+  {
+    "q_tea_reciprocidade": "Eu tenho dificuldade em conversar naturalmente numa roda ou em compartilhar sentimentos e interesses com as outras pessoas."
+  },
+  {
+    "q_tea_naoverbal": "Eu tenho dificuldade em entender a linguagem corporal, gestos ou tem pouco contato visual durante as conversas."
+  },
+  {
+    "q_tea_relacionamentos": "Eu acho muito difícil desenvolver, manter ou entender relacionamentos de amizade apropriados para a sua idade."
+  },
+  {
+    "q_tea_estereotipias": "Eu frequentemente faz movimentos repetitivos com o corpo ou mãos, ou repete muito certas palavras e frases."
+  },
+  {
+    "q_tea_rotina": "Eu sinto um incômodo enorme com quebras de rotina, sendo muito inflexível a mudanças no seu dia a dia."
+  },
+  {
+    "q_tea_interesses": "Eu possuo interesses altamente fixos e anormais na intensidade, focando obsessivamente em assuntos específicos."
+  },
+  {
+    "q_tea_sensorial": "Eu sou extremamente sensível (ou insensível) a sons, luzes, texturas de roupa ou certos cheiros no ambiente."
+  },
+  {
+    "q_borderline_vazio_cronico": "Eu frequentemente sente um 'vazio' enorme por dentro, como se não soubesse quem eu realmente sou ou o que quer da vida."
+  },
+  {
+    "q_borderline_automutilacao": "Quando a dor emocional é muito forte, eu já me cortei, se machucou de propósito ou ameaçou tirar a própria vida."
+  },
+  {
+    "q_borderline_idealizacao": "Eu costumo idolatrar uma pessoa rapidamente no início da relação, mas pouco tempo depois passa a odiá-la ou achá-la péssima por uma pequena falha."
+  },
+  {
+    "q_tdah_paralisia": "Eu sofro de 'paralisia de tarefas', onde quer muito fazer algo importante mas seu cérebro simplesmente não deixa eu começar."
+  },
+  {
+    "q_tea_masking": "Eu sinto que precisa criar um 'personagem' ou forçar contato visual para parecer normal perto das outras pessoas, o que me deixa exausto(a)."
+  },
+  {
+    "q_disforia_rejeicao": "Eu sinto uma dor emocional extrema e desproporcional quando acha que alguém me rejeitou, ignorou ou criticou."
+  },
+  {
+    "q_desregulacao_emocional": "Eu tenho muita dificuldade de controlar minhas emoções, passando rapidamente de estar bem para acessos de raiva ou choro intenso."
+  },
+  {
+    "q_isolamento_social_extremo": "Eu prefiro ficar completamente isolado(a) e tem pouquíssimo ou nenhum interesse em interações sociais."
+  },
+  {
+    "q_mente_acelerada_noturna": "Minha mente fica tão acelerada à noite com pensamentos que é quase impossível conseguir desligar para dormir."
+  },
+  {
+    "q_rigidez_mudancas": "Eu sinto um desconforto ou irritação muito forte quando meus planos ou minha rotina precisam ser mudados de última hora."
+  },
+  {
+    "q_hiperfoco_intenso": "Quando eu me interesso por um assunto, eu consigo passar horas ou dias obcecado por aquilo, esquecendo de comer ou dormir."
+  },
+  {
+    "q_paranoide_desconfianca_frequente": "Eu frequentemente suspeito, sem nenhuma prova real, de que as outras pessoas estão me explorando, me prejudicando ou me enganando."
+  }
+]

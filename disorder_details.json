@@ -1,0 +1,116 @@
+{
+  "tp_breve": {
+    "descricao": "O Transtorno Psicótico Breve é caracterizado por um início agudo de sintomas psicóticos, como delírios, alucinações ou discurso desorganizado. É uma condição temporária que dura pelo menos um dia, mas não ultrapassa um mês, com retorno completo ao nível de funcionamento anterior.",
+    "sintomas_principais": "Delírios, alucinações, discurso desorganizado e, em alguns casos, comportamento grosseiramente desorganizado ou catatônico.",
+    "criterios_clinicos": "Presença de 1 ou mais sintomas psicóticos, sendo que pelo menos um deve ser delírio, alucinação ou discurso desorganizado. Duração do episódio entre 1 dia e 1 mês, com retorno completo ao estado basal. Os sintomas não são explicados por outro transtorno psicótico, uso de substâncias ou condição médica.",
+    "como_proceder": "É fundamental a avaliação urgente por um psiquiatra (em pronto-socorro psiquiátrico se necessário) para garantir a segurança, realizar o diagnóstico diferencial e, se indicado, prescrever medicação antipsicótica a curto prazo. O psicólogo auxiliará no suporte emocional após a remissão do episódio."
+  },
+  "esquizofreniforme": {
+    "descricao": "O Transtorno Esquizofreniforme apresenta os mesmos sintomas característicos da esquizofrenia, mas difere pela sua duração mais curta. Os sintomas estão presentes por pelo menos um mês, mas se resolvem completamente em menos de seis meses.",
+    "sintomas_principais": "Delírios, alucinações, discurso desorganizado, comportamento grosseiramente desorganizado e sintomas negativos (ex: embotamento afetivo, avolia).",
+    "criterios_clinicos": "Presença de 2 ou mais dos sintomas principais por um período significativo durante pelo menos 1 mês. A duração total do transtorno (fases prodrômica, ativa e residual) é de pelo menos 1 mês, mas menos de 6 meses. Exclusão de transtornos de humor e uso de substâncias.",
+    "como_proceder": "Consultar um psiquiatra para diagnóstico e início de tratamento com psicofármacos. O acompanhamento contínuo é necessário para observar se os sintomas remitem em até 6 meses ou se o quadro evolui para Esquizofrenia. Intervenções psicossociais e psicoterapia de apoio são recomendadas."
+  },
+  "esquizofrenia": {
+    "descricao": "A Esquizofrenia é um transtorno psiquiátrico crônico e complexo que afeta a forma como a pessoa pensa, sente e se comporta, levando muitas vezes a uma perda de contato com a realidade (psicose). Costuma causar declínio significativo no funcionamento social e ocupacional.",
+    "sintomas_principais": "Delírios, alucinações (frequentemente auditivas), pensamento/discurso desorganizado, comportamento bizarro ou catatônico, e sintomas negativos como falta de vontade e afeto plano.",
+    "criterios_clinicos": "Sintomas persistentes por pelo menos 6 meses, com pelo menos 1 mês de sintomas da fase ativa. Queda acentuada no nível de funcionamento em áreas como trabalho, relações interpessoais ou cuidados pessoais em comparação ao nível pré-mórbido.",
+    "como_proceder": "Requer tratamento de longo prazo. Procure um psiquiatra para prescrição e manejo de antipsicóticos. O acompanhamento multidisciplinar, incluindo psicólogos (terapia cognitivo-comportamental para psicoses), terapeutas ocupacionais e suporte familiar, é imprescindível para a estabilização e reabilitação."
+  },
+  "bipolar_1": {
+    "descricao": "O Transtorno Bipolar Tipo I é caracterizado pela ocorrência de pelo menos um episódio maníaco na vida, com ou sem a presença de episódios depressivos. A mania envolve humor anormalmente elevado, expansivo ou irritável, e níveis extremos de energia.",
+    "sintomas_principais": "Episódios de mania: euforia, grandiosidade, necessidade de sono reduzida, fala acelerada, fuga de ideias, distratibilidade e comportamento de risco impulsivo.",
+    "criterios_clinicos": "Pelo menos um episódio maníaco durando no mínimo uma semana (ou qualquer duração se houver hospitalização), causando prejuízo severo no funcionamento social ou ocupacional. A ocorrência não é explicada por outros transtornos ou substâncias.",
+    "como_proceder": "A avaliação com psiquiatra é urgente, especialmente durante a mania. O tratamento padrão envolve estabilizadores de humor ou antipsicóticos. A psicoterapia foca na psicoeducação, adesão medicamentosa e identificação de gatilhos precoces de novas crises."
+  },
+  "bipolar_2": {
+    "descricao": "O Transtorno Bipolar Tipo II é caracterizado por episódios depressivos maiores recorrentes alternados com episódios hipomaníacos (uma forma mais leve de mania que não causa prejuízo grave nem requer hospitalização).",
+    "sintomas_principais": "Flutuação entre depressão profunda (tristeza, letargia, anedonia) e hipomania (aumento de energia, produtividade excessiva, diminuição leve da necessidade de sono, humor expansivo).",
+    "criterios_clinicos": "Critérios preenchidos para pelo menos um episódio hipomaníaco (durando pelo menos 4 dias) e pelo menos um episódio depressivo maior. Nunca houve um episódio maníaco completo.",
+    "como_proceder": "O paciente deve ser avaliado por um psiquiatra, pois o uso isolado de antidepressivos pode piorar o quadro. O tratamento foca em estabilizar o humor. O psicólogo é fundamental para ajudar a mapear as oscilações de humor e trabalhar estratégias de enfrentamento durante as fases depressivas."
+  },
+  "depressivo_maior": {
+    "descricao": "O Transtorno Depressivo Maior é uma condição mental comum e grave, marcada por profunda tristeza, perda de interesse em atividades e uma variedade de sintomas físicos e cognitivos que interferem na capacidade de funcionar no dia a dia.",
+    "sintomas_principais": "Humor deprimido a maior parte do dia, anedonia (perda de prazer), alterações de apetite/peso, insônia/hipersonia, fadiga, sentimentos de inutilidade/culpa, dificuldade de concentração e ideação suicida.",
+    "criterios_clinicos": "Cinco ou mais dos sintomas principais presentes por pelo menos 2 semanas quase todos os dias, representando uma mudança do funcionamento anterior. Pelo menos um dos sintomas é humor deprimido ou perda de interesse/prazer.",
+    "como_proceder": "Buscar avaliação de um psicólogo para psicoterapia (ex: TCC) e de um psiquiatra, que avaliará a necessidade de antidepressivos. Casos com ideação suicida requerem suporte emergencial (ex: CVV 188 ou pronto-atendimento local)."
+  },
+  "ansiedade_generalizada": {
+    "descricao": "O Transtorno de Ansiedade Generalizada (TAG) envolve preocupação excessiva, crônica e de difícil controle a respeito de diversos eventos ou atividades do dia a dia, frequentemente desproporcional à realidade.",
+    "sintomas_principais": "Ansiedade exagerada persistente, inquietação, fadiga fácil, dificuldade de concentração, irritabilidade, tensão muscular e distúrbios do sono.",
+    "criterios_clinicos": "Ansiedade e preocupação excessivas ocorrendo na maioria dos dias por pelo menos 6 meses, associadas a 3 ou mais dos sintomas físicos/cognitivos. Os sintomas causam sofrimento clinicamente significativo ou prejuízo social/ocupacional.",
+    "como_proceder": "Agendar consulta com psicólogo (terapias focadas em regulação emocional e manejo da ansiedade) e com psiquiatra para possível intervenção farmacológica (antidepressivos/ansiolíticos) que ajude na remissão dos sintomas."
+  },
+  "panico": {
+    "descricao": "O Transtorno do Pânico é caracterizado por ataques de pânico inesperados e recorrentes — surtos abruptos de medo ou desconforto intenso —, seguidos por preocupação persistente de ter novos ataques.",
+    "sintomas_principais": "Ataques de pânico incluindo palpitações, sudorese, tremores, falta de ar, dor no peito, tontura, calafrios, medo de morrer ou medo de enlouquecer/perder o controle.",
+    "criterios_clinicos": "Ataques de pânico recorrentes inesperados seguidos de pelo menos 1 mês de preocupação contínua sobre ter novos ataques ou mudança comportamental mal-adaptativa (evitação de locais/situações).",
+    "como_proceder": "O diagnóstico psiquiátrico é essencial para descartar condições cardiológicas/clínicas (geralmente feito na emergência inicial). O tratamento inclui psiquiatra (medicação preventiva de crises) e psicoterapia focada em dessensibilização e reestruturação cognitiva."
+  },
+  "toc": {
+    "descricao": "O Transtorno Obsessivo-Compulsivo (TOC) envolve a presença de obsessões (pensamentos, imagens ou impulsos intrusivos que causam ansiedade) e compulsões (comportamentos repetitivos realizados para neutralizar as obsessões).",
+    "sintomas_principais": "Obsessões (ex: medo de contaminação, dúvidas constantes, pensamentos inaceitáveis) e compulsões (ex: lavagem, checagem, contagem, organização simétrica).",
+    "criterios_clinicos": "Presença de obsessões, compulsões ou ambas, que tomam tempo significativo (mais de 1 hora por dia) e causam sofrimento clínico intenso ou prejuízos funcionais. As compulsões não conectam-se de forma realista ao evento que visam prevenir.",
+    "como_proceder": "Recomenda-se tratamento combinado: psiquiatra para uso de inibidores seletivos de recaptação de serotonina (em doses frequentemente maiores que as da depressão) e psicólogo especializado em TCC com ênfase na Prevenção de Resposta e Exposição (EPR)."
+  },
+  "tept": {
+    "descricao": "O Transtorno de Estresse Pós-Traumático (TEPT) desenvolve-se após a exposição a um evento traumático (ameaça de morte, lesão grave ou violência sexual). É caracterizado pela revivescência do trauma, evitação de gatilhos, e hipervigilância.",
+    "sintomas_principais": "Flashbacks, pesadelos relacionados ao trauma, esquiva emocional, distanciamento social, sobressalto exagerado, irritabilidade e insônia.",
+    "criterios_clinicos": "Histórico de exposição a trauma, seguido por sintomas intrusivos, evitação persistente de estímulos associados, alterações negativas em cognições/humor e hiperestimulação. Sintomas persistem por mais de 1 mês e geram grande sofrimento/prejuízo.",
+    "como_proceder": "O suporte psicológico é central, utilizando abordagens baseadas em evidências para trauma (como TCC, EMDR ou Terapias de Exposição Prolongada). O psiquiatra avaliará o uso de medicações para atenuar a insônia, ansiedade reativa e sintomas depressivos associados."
+  },
+  "tp_paranoide": {
+    "descricao": "O Transtorno de Personalidade Paranoide é um padrão persistente de desconfiança e suspeita exacerbada, no qual as intenções dos outros são frequentemente interpretadas como malévolas, sem evidências suficientes.",
+    "sintomas_principais": "Desconfiança infundada, tendência a guardar rancor prolongado, sensibilidade excessiva a rejeições, suspeita constante sobre a fidelidade de parceiros ou lealdade de amigos.",
+    "criterios_clinicos": "Padrão de desconfiança generalizada, iniciando no começo da vida adulta, indicado por 4 ou mais critérios (ex: suspeita sem base, hesitação em confiar, percepção de ataques ao caráter, ciúme irracional).",
+    "como_proceder": "Buscar psicólogo experiente em transtornos de personalidade. A terapia visa construir gradativamente a confiança, flexibilizar interpretações e melhorar habilidades sociais. O tratamento psiquiátrico pode ser útil apenas para sintomas comórbidos (ex: ansiedade severa)."
+  },
+  "tp_esquizoide": {
+    "descricao": "O Transtorno de Personalidade Esquizoide é caracterizado por um padrão de desapego e falta de interesse crônico por relações sociais, acompanhado por uma gama restrita de expressão emocional.",
+    "sintomas_principais": "Falta de desejo de intimidade, preferência quase exclusiva por atividades solitárias, indiferença a elogios/críticas, afeto achatado, frieza emocional e falta de amigos íntimos.",
+    "criterios_clinicos": "Padrão difuso de distanciamento social e restrição de expressão emocional iniciando no começo da idade adulta, caracterizado por 4 ou mais sintomas (ex: escolhe estar sozinho, pouco interesse sexual com outras pessoas, embotamento afetivo).",
+    "como_proceder": "A psicoterapia é a principal linha de cuidado, focando em treinos de habilidades sociais, ainda que o paciente normalmente não sinta incômodo com o distanciamento. O suporte de psiquiatria é raramente buscado, exceto se houver comorbidades como depressão."
+  },
+  "tp_antissocial": {
+    "descricao": "O Transtorno de Personalidade Antissocial envolve um padrão de desrespeito persistente e violação dos direitos dos outros, incluindo comportamentos irresponsáveis, impulsivos e falta de empatia/remorso.",
+    "sintomas_principais": "Desrespeito às normas sociais (frequentemente comatos ilegais), enganos/mentiras repetitivas para ganho pessoal, impulsividade, agressividade, desrespeito pela segurança e ausência de remorso.",
+    "criterios_clinicos": "Padrão pervasivo de violação dos direitos alheios ocorrendo desde os 15 anos de idade (com evidências de transtorno de conduta anterior), caracterizado por pelo menos 3 critérios listados, sendo o paciente maior de 18 anos.",
+    "como_proceder": "O diagnóstico deve ser feito por psiquiatra/psicólogo clínico experiente. O tratamento é desafiador devido à falta de motivação intrínseca; foca-se na prevenção de comportamentos de risco e consequências legais (psicoterapia estruturada). Intervenção medicamentosa só é usada para comorbidades (ex: impulsividade grave)."
+  },
+  "tp_borderline": {
+    "descricao": "O Transtorno de Personalidade Borderline (TPB) é marcado por intensa instabilidade nos relacionamentos interpessoais, na autoimagem, nas emoções e por marcada impulsividade.",
+    "sintomas_principais": "Medo intenso de abandono, relacionamentos intensos e instáveis (idealização/desvalorização), impulsividade prejudicial (gastos, sexo, substâncias), gestos ou ideação suicida/automutilação, e vazio crônico.",
+    "criterios_clinicos": "Padrão de instabilidade e impulsividade começando na fase inicial da idade adulta, manifestado por 5 ou mais critérios (ex: esforços frenéticos para evitar abandono, automutilação, reatividade do humor, raiva inadequada).",
+    "como_proceder": "A Terapia Comportamental Dialética (DBT) é o padrão ouro na psicologia para o TPB, ensinando regulação emocional e tolerância ao mal-estar. O psiquiatra atua paralelamente para medicar sintomas agudos (impulsividade extrema, humor deprimido), garantindo a segurança do paciente."
+  },
+  "tp_narcisista": {
+    "descricao": "O Transtorno de Personalidade Narcisista é caracterizado por um padrão duradouro de grandiosidade (em fantasia ou comportamento), uma necessidade constante de admiração e falta de empatia pelas necessidades alheias.",
+    "sintomas_principais": "Sensação grandiosa de própria importância, fantasias de sucesso ilimitado, crença de ser 'especial', exigência de admiração excessiva, exploração interpessoal, inveja e atitudes arrogantes.",
+    "criterios_clinicos": "Padrão invasivo de grandiosidade, necessidade de admiração e ausência de empatia presente desde a idade adulta jovem, manifestado por 5 ou mais critérios estabelecidos no DSM.",
+    "como_proceder": "Requer acompanhamento com psicoterapeuta (frequentemente psicanálise ou terapias cognitivas focadas em esquemas) para trabalhar a autoestima frágil que sustenta a fachada de grandiosidade. A adesão costuma ser difícil. Consulta psiquiátrica se houver episódios de depressão subjacente."
+  },
+  "tp_evitativa": {
+    "descricao": "O Transtorno de Personalidade Evitativa é caracterizado por um sentimento crônico de inadequação, extrema sensibilidade à rejeição ou crítica, resultando em evitação social significativa.",
+    "sintomas_principais": "Evitação de atividades profissionais/sociais por medo da crítica, inibição em relacionamentos novos, forte convicção de ser socialmente inepto ou sem atrativos.",
+    "criterios_clinicos": "Padrão pervasivo de inibição social, sentimentos de inadequação e hipersensibilidade à avaliação negativa. Preenche pelo menos 4 critérios relacionados à esquiva contínua de interações sociais desprotegidas.",
+    "como_proceder": "A intervenção central é a psicoterapia (ex: TCC), que auxilia a reestruturar crenças de inadequação e promove exposição gradual a cenários sociais. O psiquiatra pode avaliar o uso de medicação caso a fobia social severa incapacite a qualidade de vida inicial."
+  },
+  "tp_obsessivo_compulsiva": {
+    "descricao": "O Transtorno de Personalidade Obsessivo-Compulsiva (TPOC) é um padrão global de preocupação com ordem, perfeccionismo e controle mental e interpessoal, à custa de flexibilidade, abertura e eficiência.",
+    "sintomas_principais": "Perfeccionismo extremo que interfere na conclusão de tarefas, devoção excessiva ao trabalho (excluindo lazer), rigidez moral e relutância em delegar tarefas a não ser que sejam feitas exatamente de sua maneira.",
+    "criterios_clinicos": "Padrão de preocupação com ordem e controle iniciando no começo da vida adulta. Ao menos 4 critérios (ex: rigidez, avareza com dinheiro, incapacidade de descartar objetos sem valor, foco excessivo em detalhes/regras). Diferencia-se do TOC por não ter obsessões e compulsões intrusivas verdadeiras.",
+    "como_proceder": "Tratamento majoritariamente psicoterápico para trabalhar a flexibilidade mental, aceitação de incertezas e a valorização das relações interpessoais além do trabalho. Em alguns casos, a psiquiatria auxilia no manejo de ansiedade secundária ao excesso de autocobrança."
+  },
+  "tdah": {
+    "descricao": "O Transtorno do Déficit de Atenção com Hiperatividade (TDAH) é um transtorno do neurodesenvolvimento que interfere na capacidade de manter o foco, regular o nível de atividade (hiperatividade) e inibir comportamentos impulsivos.",
+    "sintomas_principais": "Desatenção (dificuldade em manter foco, esquecimentos, desorganização), hiperatividade (inquietação motora, falar excessivamente) e impulsividade (interromper os outros, não esperar a vez).",
+    "criterios_clinicos": "Presença de 6 ou mais sintomas de desatenção e/ou 6 de hiperatividade/impulsividade (5 se for adulto) persistindo por ao menos 6 meses. Sintomas devem estar presentes antes dos 12 anos e causar prejuízo em 2 ou mais ambientes (ex: casa e escola/trabalho).",
+    "como_proceder": "O diagnóstico em crianças e adultos deve ser minucioso. O plano de tratamento frequentemente inclui avaliação por psiquiatra/neurologista para uso de estimulantes (ou não estimulantes) que auxiliam no foco neurológico, associado à psicoterapia e treinamento organizacional (TCC, fonoaudiologia, pedagogia conforme necessidade)."
+  },
+  "tea": {
+    "descricao": "O Transtorno do Espectro Autista (TEA) é um transtorno do neurodesenvolvimento caracterizado por déficits persistentes na comunicação social e interações sociais, além de padrões restritos e repetitivos de comportamento, interesses e atividades.",
+    "sintomas_principais": "Dificuldades de reciprocidade social/emocional, déficits em comunicação não verbal (contato visual/gestos), dificuldade em manter relacionamentos, movimentos repetitivos (estereotipias), inflexibilidade a mudanças na rotina e hiper/hiporreatividade sensorial.",
+    "criterios_clinicos": "Déficits em múltiplas instâncias na comunicação/interação social, e presença de pelo menos dois tipos de padrões restritos/repetitivos. Os sintomas devem estar presentes no período de desenvolvimento inicial, gerando prejuízo clínico atual.",
+    "como_proceder": "Requer uma equipe multidisciplinar. A avaliação inicial costuma envolver neurologista, psiquiatra ou neuropediatra e neuropsicólogos. Intervenções terapêuticas (como fonoaudiologia, terapia ocupacional para integração sensorial e psicologia comportamental - ex: ABA) devem ser desenhadas individualmente para promover a autonomia funcional."
+  }
+}

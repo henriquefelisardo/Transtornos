@@ -16,10 +16,7 @@ def get_key():
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return ch
 
-def render_screen(engine: InferenceEngine, prompt_text: str, menu_str: str):
-    # Limpar tela
-    sys.stdout.write("\033[2J\033[H")
-    
+def render_header(engine: InferenceEngine, prompt_text: str):
     # Cabeçalho
     print("=" * 80)
     print("🧠 Akinator DSM-5 - Inferência Probabilística")
@@ -35,15 +32,11 @@ def render_screen(engine: InferenceEngine, prompt_text: str, menu_str: str):
         # Limita tamanho do nome para não quebrar layout
         name = (name[:45] + '...') if len(name) > 45 else name
         print(f"  {i+1}. {name.ljust(48)} ({score:+.2f})")
-    print("=" * 70)
+    print("=" * 80)
     
     # Pergunta
-    wrapped_prompt = textwrap.fill(prompt_text, width=70)
-    print(f"\n{wrapped_prompt}\n")
-    
-    # Menu (na última linha de renderização)
-    sys.stdout.write(f"{menu_str}")
-    sys.stdout.flush()
+    wrapped_prompt = textwrap.fill(prompt_text, width=80)
+    print(f"{wrapped_prompt}")
 
 def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: int, prompt: str) -> float:
     prompt_text = f"Pergunta [{question_count+1}/{max_questions}]: {prompt}"
@@ -57,6 +50,8 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
     ]
     selected_idx = 2  # Começa no "Não Sei" por padrão
     
+    render_header(engine, prompt_text)
+    
     while True:
         menu_parts = []
         for i, (label, weight) in enumerate(options):
@@ -66,7 +61,10 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
                 menu_parts.append(f"  [{label}]")
         
         menu_str = " ".join(menu_parts)
-        render_screen(engine, prompt_text, menu_str)
+        
+        # Redraw only the menu line
+        sys.stdout.write(f"\r\033[K{menu_str}")
+        sys.stdout.flush()
         
         key = get_key()
         if key == '\x1b[C': # Seta Direita
@@ -74,10 +72,31 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
         elif key == '\x1b[D': # Seta Esquerda
             selected_idx = max(0, selected_idx - 1)
         elif key in ('\r', '\n'): # Enter
+            sys.stdout.write("\n\n") # Give space for next question
             return options[selected_idx][1]
         elif key == '\x03': # Ctrl+C
             sys.stdout.write("\nOperação cancelada pelo usuário.\n")
             sys.exit(0)
+
+def print_diagnosis_details(disorder_id: str, engine_instance):
+    import json
+    try:
+        with open("disorder_details.json", "r", encoding="utf-8") as f:
+            details = json.load(f)
+    except FileNotFoundError:
+        print("\033[93m[Aviso] Detalhamento do transtorno não encontrado (disorder_details.json ausente).\033[0m")
+        return
+
+    info = details.get(disorder_id)
+    if not info:
+        return
+
+    print(f"\033[1;36m=== DETALHAMENTO CLÍNICO ===\033[0m")
+    print(f"\033[1mO que é:\033[0m {info.get('descricao', '')}")
+    print(f"\033[1mSintomas Principais:\033[0m {info.get('sintomas_principais', '')}")
+    print(f"\033[1mCritérios Clínicos:\033[0m {info.get('criterios_clinicos', '')}")
+    print(f"\033[1mComo Proceder:\033[0m {info.get('como_proceder', '')}")
+    print("=" * 80)
 
 def main():
     try:
@@ -92,13 +111,14 @@ def main():
     while question_count < max_questions:
         stop, result = engine.check_stop_conditions()
         if stop:
-            sys.stdout.write("\033[2J\033[H")
-            print("=" * 70)
+            print("=" * 80)
             if result:
                 print(f"✅ DIAGNÓSTICO ATINGIDO: {result['name']} (Score: {engine.scores[result['id']]:.2f})")
+                print("=" * 80)
+                print_diagnosis_details(result['id'], engine)
             else:
                 print("❌ Nenhum transtorno reconhecido com base nas respostas fornecidas.")
-            print("=" * 70)
+                print("=" * 80)
             return
 
         q = engine.get_next_question()
@@ -111,17 +131,18 @@ def main():
         
     # Limite de perguntas atingido
     stop, result = engine.check_stop_conditions()
-    sys.stdout.write("\033[2J\033[H")
-    print("=" * 70)
+    print("=" * 80)
     if result:
         print(f"✅ DIAGNÓSTICO ATINGIDO NO LIMITE: {result['name']} (Score: {engine.scores[result['id']]:.2f})")
+        print("=" * 80)
+        print_diagnosis_details(result['id'], engine)
     else:
-        print("❌ Limite de 50 perguntas atingido. Diagnóstico inconclusivo.")
+        print("Diagnóstico inconclusivo, não indicando nenhum transtorno.")
         if engine.active_disorders:
             best_id = max(engine.scores, key=engine.scores.get)
             best_score = engine.scores[best_id]
             print(f"Transtorno mais próximo: {engine.active_disorders[best_id]['name']} (Score: {best_score:.2f})")
-    print("=" * 70)
+        print("=" * 80)
 
 if __name__ == "__main__":
     main()
