@@ -2,7 +2,7 @@
 
 Bem-vindo ao **Akinator Clínico**, um sistema avançado de inferência probabilística projetado para triagem de Transtornos Mentais e de Personalidade com base rigorosa nos critérios do manual diagnóstico DSM-5.
 
-Este projeto funciona como um "motor de árvore de decisão dinâmica", que calcula em tempo real o Ganho de Informação de cada pergunta e realiza uma entrevista psiquiátrica interativa por meio de um CLI (Interface de Linha de Comando) responsivo.
+Este projeto funciona como um "motor de árvore de decisão dinâmica", que calcula em tempo real o Ganho de Informação de cada pergunta e realiza uma entrevista psiquiátrica interativa. Ele oferece **duas** interfaces de uso: uma elegante Interface Web (via Django) e uma interface raiz de Linha de Comando (CLI). Ambas operam exatamente com o mesmo cérebro probabilístico.
 
 ---
 
@@ -36,29 +36,56 @@ Para corrigir, a `InferenceEngine` está matematicamente travada e **proibida de
 
 ## 🏗️ Arquitetura do Projeto
 
-O projeto não requer bibliotecas externas gigantes. Ele foi escrito 100% em Python nativo.
+O projeto é modular e as camadas são extremamente bem separadas:
 
-* `knowledge_base.json`: O banco de dados construído pelos Agentes IA. Ele mapeia os transtornos, o peso (`key_symptoms` vs `secondary_symptoms`), os agrupamentos de perguntas cruzadas e a hierarquia de dependência clínica (`depends_on`).
-* `engine.py`: O Cérebro. Contém a classe `InferenceEngine`, responsável por carregar o banco JSON, gerenciar as pontuações e penalidades (Soft-Pruning), armazenar as respostas pregressas e calcular a matriz de entropia de Shannon para retornar a próxima questão.
-* `cli.py`: A Interface Single-Page. Utiliza `sys` e `termios` para ler diretamente o buffer do teclado no terminal linux, permitindo navegação via "setinhas" (⬅️ ➡️). A cada interação, ele limpa a tela e renderiza um *Leaderboard* atualizado em tempo real no topo, listando os 5 transtornos mais cotados no momento.
-* `clinical_data.json`: Arquivo bruto residual contendo a extração direta dos critérios do DSM-5 usada como base.
+* **Banco de Dados (Conhecimento):**
+  * `knowledge_base.json`: Mapeia os 19 transtornos, os pesos dos sintomas (`key_symptoms` vs `secondary_symptoms`), os agrupamentos guarda-chuva (`umbrella`) e a hierarquia de dependência clínica (`depends_on`).
+  * `disorder_details.json`: Mapeia os relatórios clínicos extensos. Após o diagnóstico, as descrições, critérios clínicos e condutas profissionais são resgatados deste arquivo.
+
+* **O Cérebro (Lógica):**
+  * `engine.py`: O coração matemático do projeto. Contém a classe `InferenceEngine`, que carrega o banco JSON, gerencia os cálculos e a árvore de probabilidade, e toma as decisões do sistema. Não tem dependências e é `stateless-friendly`.
+
+* **O Frontend (Django):**
+  * Diretório `web_app/` e `manage.py`: Uma aplicação Web minimalista e elegante em Django que roda o sistema pelo navegador. Para garantir velocidade máxima, a interface usa a funcionalidade de "Sessões" nativa do Django. Cada resposta é salva no navegador do cliente em tempo real, eliminando a necessidade de banco de dados (`SQLite`) e acelerando absurdamente o carregamento de cada pergunta.
+  * Além do mouse, as interfaces suportam captura de teclado (via JavaScript Vanilla) para emular o terminal!
+
+* **O Terminal (CLI):**
+  * `cli.py`: A versão inicial "Raiz". Utiliza buffers crus (`tty`/`termios`) para criar uma experiência de jogo interativa dentro do terminal Linux, permitindo selecionar alternativas com as setinhas e re-renderizando in-place as linhas da interface, garantindo logs e debugging extremamente enxutos.
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Como Instalar e Rodar
 
-**Pré-requisitos:** O sistema foi construído puramente com as bibliotecas built-in do Python e preparado para rodar em terminais TTY (Linux/Mac). **Nenhum** `pip install` é necessário.
+Você pode escolher rodar a versão moderna pela WEB ou a versão clássica pelo Terminal. Ambas partilham da mesma inteligência.
 
-Para iniciar sua avaliação psiquiátrica automatizada, basta executar:
-
+### Pré-requisitos Gerais
+Caso escolha rodar a interface WEB, você precisa ter a biblioteca do **Django** instalada no seu sistema ou no seu ambiente virtual.
 ```bash
-cd /home/henryfelisardo/code/Transtornos
-python3 cli.py
+pip install django
+# Ou no Ubuntu: sudo apt install python3-django
 ```
 
-**Controles:**
-- Use a **Seta Esquerda (⬅️)** e a **Seta Direita (➡️)** para alternar entre os botões de Discordância e Concordância.
-- Pressione **ENTER** para confirmar a resposta.
-- Pressione **CTRL+C** a qualquer momento para abandonar a sessão de triagem.
+### Opção 1: Interface Web (Browser)
+Se quiser a experiência visual rica:
 
-**Aviso Legal:** O resultado gerado pelo algoritmo probabilístico é um experimento e de forma alguma substitui uma avaliação profissional psiquiátrica clínica e humana.
+1. Ative seu ambiente virtual (se aplicável).
+2. Na raiz do projeto, inicie o servidor:
+   ```bash
+   python manage.py runserver 2222
+   ```
+   *(Substitua `2222` pela porta que desejar).*
+3. Abra seu navegador de preferência e acesse **http://127.0.0.1:2222/**.
+4. **Dica de Ouro:** A interface web possui suporte total a teclado! Utilize as **Setas (⬅️ ➡️)** do teclado para alternar entre "Discordo" e "Concordo", e **Espaço / Enter** para enviar sua resposta e pular para a próxima tela sem tocar no mouse!
+
+### Opção 2: Linha de Comando (Terminal)
+Se quiser a experiência nerd e rápida, o terminal não exige instalação de bibliotecas externas (funciona 100% com o Python nativo do Linux):
+
+1. Vá até a raiz do projeto.
+2. Execute o script principal:
+   ```bash
+   python cli.py
+   ```
+3. Use a **Seta Esquerda (⬅️)** e **Direita (➡️)** para alternar entre as respostas, e aperte **ENTER** para prosseguir. No terminal, se você solicitar a visualização do ranking na primeira tela, verá o *Leaderboard* das top 5 doenças atualizando a cada apertada de botão em tempo real.
+
+---
+**Aviso Legal:** O resultado gerado pelo algoritmo probabilístico deste projeto é um experimento matemático-lógico e de forma alguma substitui uma avaliação profissional, psiquiátrica ou psicológica clínica e humana. Procure sempre um profissional habilitado da saúde.
