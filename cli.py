@@ -22,7 +22,7 @@ def render_screen(engine: InferenceEngine, prompt_text: str, menu_str: str):
     
     # Cabeçalho
     print("=" * 70)
-    print("🧠 Akinator DSM-5 - Inferência Probabilística (v6.0)")
+    print("🧠 Akinator DSM-5 - Inferência Probabilística (v7.0)")
     print("=" * 70)
     
     # Leaderboard (Top 5)
@@ -49,13 +49,13 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
     prompt_text = f"Pergunta [{question_count+1}/{max_questions}]: {prompt}"
     
     options = [
-        ("Nunca", 0.0),
-        ("Raramente", 0.25),
-        ("Às vezes", 0.5),
-        ("Frequentemente", 0.75),
-        ("Sempre", 1.0)
+        ("Discordo Totalmente", 0.0),
+        ("Discordo", 0.25),
+        ("Não Sei", 0.5),
+        ("Concordo um pouco", 0.75),
+        ("Concordo Totalmente", 1.0)
     ]
-    selected_idx = 0
+    selected_idx = 2  # Começa no "Não Sei" por padrão
     
     while True:
         menu_parts = []

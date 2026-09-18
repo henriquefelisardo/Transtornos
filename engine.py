@@ -24,9 +24,12 @@ class InferenceEngine:
 
     def process_answer(self, question_id: str, weight: float):
         """
-        Processa a resposta do usuário usando uma escala de peso (0.0 a 1.0).
-        0.0 = Nunca (Penalidade)
-        > 0.0 = Bônus proporcional à frequência do sintoma.
+        Processa a resposta do usuário usando a Escala de Concordância (0.0 a 1.0).
+        0.0 = Discordo Totalmente (Forte Penalidade)
+        0.25 = Discordo (Penalidade Leve)
+        0.5 = Não Sei (Neutro, ignorado)
+        0.75 = Concordo Um Pouco (Bônus Parcial)
+        1.0 = Concordo Totalmente (Bônus Integral)
         """
         self.asked_questions.add(question_id)
         self.answers[question_id] = weight
@@ -35,24 +38,30 @@ class InferenceEngine:
         if not q_data:
             return
             
-        if weight == 0.0:
-            # Resposta 'Nunca': penalidade para não cancelar instantaneamente (soft-pruning)
+        if weight == 0.5:
+            # Neutro - não afeta a probabilidade
+            return
+            
+        if weight < 0.5:
+            # Discordância (0.0 ou 0.25): aplicar penalidade
+            penalty_mult = 1.0 if weight == 0.0 else 0.5
             for d_id, d in self.active_disorders.items():
                 if question_id in d.get("key_symptoms", []):
-                    self.scores[d_id] -= 0.15
+                    self.scores[d_id] -= (0.20 * penalty_mult)
                 elif q_data.get("type") == "umbrella" and d_id in q_data.get("targets", []):
-                    self.scores[d_id] -= 0.15
+                    self.scores[d_id] -= (0.20 * penalty_mult)
                 elif question_id in d.get("secondary_symptoms", []):
-                    self.scores[d_id] -= 0.05
+                    self.scores[d_id] -= (0.10 * penalty_mult)
         else:
-            # Resposta > 0.0: atualizar pontuações multiplicadas pela intensidade
+            # Concordância (0.75 ou 1.0): dar pontos
+            bonus_mult = 1.0 if weight == 1.0 else 0.5
             for d_id, d in self.active_disorders.items():
                 if question_id in d.get("key_symptoms", []):
-                    self.scores[d_id] += (2.0 * weight) / self.total_symptoms[d_id]
+                    self.scores[d_id] += (2.0 * bonus_mult) / self.total_symptoms[d_id]
                 elif question_id in d.get("secondary_symptoms", []):
-                    self.scores[d_id] += (1.2 * weight) / self.total_symptoms[d_id]
+                    self.scores[d_id] += (1.2 * bonus_mult) / self.total_symptoms[d_id]
                 elif q_data.get("type") == "umbrella" and d_id in q_data.get("targets", []):
-                    self.scores[d_id] += (0.3 * weight)
+                    self.scores[d_id] += (0.3 * bonus_mult)
 
     def get_next_question(self) -> Optional[Dict]:
         """
@@ -83,8 +92,8 @@ class InferenceEngine:
             # Checar pré-requisitos lógicos (Árvore de Dependência)
             dependency = q_data.get("depends_on")
             if dependency:
-                # Se a pergunta raiz ainda não foi feita, ou se a resposta foi 'Nunca' (0.0), pulamos essa pergunta
-                if dependency not in self.answers or self.answers[dependency] == 0.0:
+                # Se a pergunta raiz ainda não foi feita, ou se a resposta foi menor que 0.75 (Concordo um pouco), pulamos essa pergunta
+                if dependency not in self.answers or self.answers[dependency] < 0.75:
                     continue
             
             targets_in_active = 0
@@ -137,7 +146,7 @@ class InferenceEngine:
     def check_stop_conditions(self) -> Tuple[bool, Optional[Dict]]:
         """
         Verifica se atingiu o threshold para alguma doença.
-        Aplica trava de cautela: nunca fecha antes de 15 perguntas.
+        Aplica trava de cautela: nunca fecha antes de 30 perguntas.
         """
         if not self.active_disorders:
             return True, None
@@ -146,8 +155,8 @@ class InferenceEngine:
         best_score = self.scores[best_disorder_id]
         disorder = self.active_disorders[best_disorder_id]
         
-        # Trava de cautela: obrigar um mínimo de 15 perguntas investigativas
-        if best_score >= disorder.get("threshold", 0.8) and len(self.asked_questions) >= 15:
+        # Trava de cautela: obrigar um mínimo de 30 perguntas investigativas
+        if best_score >= disorder.get("threshold", 0.8) and len(self.asked_questions) >= 30:
             return True, disorder
             
         return False, None
