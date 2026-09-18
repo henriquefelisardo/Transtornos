@@ -1317,7 +1317,7 @@
     },
     {
       "id": "q_borderline_instabilidade",
-      "text": "Meu humor muda de forma muito brusca e intensa no mesmo dia, indo de uma alegria normal para uma raiva, ansiedade ou tristeza paralisante em questão de horas.",
+      "text": "Seu humor muda de forma muito brusca e intensa no mesmo dia, indo de uma alegria normal para uma raiva, ansiedade ou tristeza paralisante em questão de horas.",
       "type": "specific",
       "targets": [
         "tp_borderline"
