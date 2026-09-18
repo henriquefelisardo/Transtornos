@@ -1,0 +1,325 @@
+[
+  {
+    "transtorno": "Transtorno Psicótico Breve",
+    "sintomas_chave": [
+      "Presença de delírios",
+      "Presença de alucinações",
+      "Discurso desorganizado (ex: descarrilamento frequente ou incoerência)"
+    ],
+    "sintomas_secundarios": [
+      "Comportamento grosseiramente desorganizado ou catatônico",
+      "Duração de um episódio: pelo menos 1 dia, mas menos de 1 mês",
+      "Retorno completo ao nível pré-mórbido de funcionamento",
+      "Não é melhor explicado por transtorno depressivo com características psicóticas",
+      "Não é melhor explicado por transtorno bipolar com características psicóticas",
+      "Não atende aos critérios para esquizofrenia",
+      "Os sintomas não são devidos a efeitos fisiológicos de uma substância ou outra condição médica"
+    ]
+  },
+  {
+    "transtorno": "Transtorno Esquizofreniforme",
+    "sintomas_chave": [
+      "Delírios",
+      "Alucinações",
+      "Discurso desorganizado"
+    ],
+    "sintomas_secundarios": [
+      "Comportamento grosseiramente desorganizado ou catatônico",
+      "Sintomas negativos (expressão emotiva diminuída ou avolia)",
+      "O episódio dura pelo menos 1 mês, mas menos de 6 meses",
+      "Ausência de episódios depressivos maiores ou maníacos concomitantes com a fase ativa",
+      "Se ocorreram episódios de humor, foram presentes por minoria da duração dos períodos ativo e residual",
+      "Não é atribuível a efeitos fisiológicos de substância",
+      "Não é atribuível a outra condição médica"
+    ]
+  },
+  {
+    "transtorno": "Esquizofrenia",
+    "sintomas_chave": [
+      "Delírios",
+      "Alucinações",
+      "Discurso desorganizado"
+    ],
+    "sintomas_secundarios": [
+      "Comportamento grosseiramente desorganizado ou catatônico",
+      "Sintomas negativos (diminuição da expressão emocional, avolia)",
+      "Nível de funcionamento em uma ou mais áreas principais acentuadamente abaixo do alcançado antes do início",
+      "Sinais contínuos do distúrbio persistem por pelo menos 6 meses",
+      "Transtorno esquizoafetivo e depressivo/bipolar com características psicóticas foram descartados",
+      "Não atribuível aos efeitos fisiológicos de substância ou condição médica",
+      "Se histórico de autismo ou distúrbio de comunicação, o diagnóstico só é feito se delírios/alucinações proeminentes estão presentes"
+    ]
+  },
+  {
+    "transtorno": "Transtorno Bipolar Tipo I",
+    "sintomas_chave": [
+      "Pelo menos um episódio maníaco na vida (humor anormal e persistentemente elevado, expansivo ou irritável)",
+      "Aumento persistente da atividade dirigida a objetivos ou energia",
+      "Duração do episódio maníaco por pelo menos 1 semana e presente na maior parte do dia"
+    ],
+    "sintomas_secundarios": [
+      "Autoestima inflada ou grandiosidade",
+      "Redução da necessidade de sono",
+      "Mais loquaz que o habitual ou pressão para continuar falando",
+      "Fuga de ideias ou experiência subjetiva de pensamentos acelerados",
+      "Distratibilidade (atenção é desviada para estímulos externos sem importância)",
+      "Aumento da atividade dirigida a objetivos (social, no trabalho/escola ou sexual) ou agitação psicomotora",
+      "Envolvimento excessivo em atividades com alto potencial para consequências prejudiciais"
+    ]
+  },
+  {
+    "transtorno": "Transtorno Bipolar Tipo II",
+    "sintomas_chave": [
+      "Preenchimento de critérios para pelo menos um episódio hipomaníaco (duração de pelo menos 4 dias consecutivos)",
+      "Preenchimento de critérios para pelo menos um episódio depressivo maior",
+      "Ausência de histórico de episódio maníaco"
+    ],
+    "sintomas_secundarios": [
+      "Humor elevado, expansivo ou irritável (fase hipomaníaca)",
+      "Aumento da energia ou atividade dirigida a objetivos (fase hipomaníaca)",
+      "Sintomas não suficientemente graves para causar prejuízo acentuado no funcionamento (fase hipomaníaca)",
+      "Humor deprimido ou perda de interesse/prazer (fase depressiva)",
+      "Alteração de peso ou apetite (fase depressiva)",
+      "Insônia ou hipersonia (fase depressiva)",
+      "Fadiga, sentimentos de inutilidade/culpa, capacidade de concentração diminuída (fase depressiva)"
+    ]
+  },
+  {
+    "transtorno": "Transtorno Depressivo Maior",
+    "sintomas_chave": [
+      "Humor deprimido na maior parte do dia, quase todos os dias",
+      "Diminuição acentuada do interesse ou prazer em todas ou quase todas as atividades",
+      "Sintomas presentes por um período de 2 semanas, representando mudança no funcionamento"
+    ],
+    "sintomas_secundarios": [
+      "Perda ou ganho de peso significativo sem estar em dieta, ou mudança do apetite",
+      "Insônia ou hipersonia quase todos os dias",
+      "Agitação ou retardo psicomotor quase todos os dias",
+      "Fadiga ou perda de energia quase todos os dias",
+      "Sentimentos de inutilidade ou culpa excessiva/inadequada",
+      "Capacidade diminuída de pensar, concentrar-se, ou indecisão",
+      "Pensamentos recorrentes de morte, ideação suicida recorrente ou tentativa de suicídio"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Ansiedade Generalizada",
+    "sintomas_chave": [
+      "Ansiedade e preocupação excessivas (expectativa apreensiva)",
+      "Ocorrência na maioria dos dias por pelo menos 6 meses, sobre diversos eventos ou atividades",
+      "Dificuldade em controlar a preocupação"
+    ],
+    "sintomas_secundarios": [
+      "Inquietação ou sensação de nervos à flor da pele",
+      "Fatigabilidade fácil (cansar-se facilmente)",
+      "Dificuldade de concentração ou sensação de 'branco' na mente",
+      "Irritabilidade",
+      "Tensão muscular",
+      "Perturbação do sono (dificuldade em adormecer/manter o sono, ou sono inquieto)",
+      "A ansiedade causa sofrimento clinicamente significativo ou prejuízo no funcionamento"
+    ]
+  },
+  {
+    "transtorno": "Transtorno do Pânico",
+    "sintomas_chave": [
+      "Ataques de pânico inesperados e recorrentes",
+      "Apreensão/preocupação persistente acerca de novos ataques (duração de no mínimo 1 mês)",
+      "Mudança desadaptativa significativa no comportamento relacionada aos ataques (ex: evitação)"
+    ],
+    "sintomas_secundarios": [
+      "Palpitações, coração batendo forte ou taquicardia",
+      "Suor, tremores ou abalos musculares",
+      "Sensações de falta de ar ou sufocamento",
+      "Sensações de asfixia, dor ou desconforto torácico",
+      "Náusea, desconforto abdominal, tontura ou desmaio",
+      "Calafrios, ondas de calor, parestesias",
+      "Desrealização, despersonalização, medo de perder o controle/loucura ou de morrer"
+    ]
+  },
+  {
+    "transtorno": "Transtorno Obsessivo-Compulsivo",
+    "sintomas_chave": [
+      "Presença de obsessões (pensamentos, impulsos ou imagens recorrentes intrusivos)",
+      "Presença de compulsões (comportamentos repetitivos ou atos mentais em resposta à obsessão)",
+      "Tentativas de ignorar, suprimir ou neutralizar as obsessões com compulsões"
+    ],
+    "sintomas_secundarios": [
+      "As compulsões visam prevenir ou reduzir a ansiedade ou evitar evento temido",
+      "As compulsões não têm conexão realista com o evento que visam neutralizar ou são excessivas",
+      "As obsessões ou compulsões tomam tempo significativo (ex: mais de 1 hora por dia)",
+      "Causam sofrimento clinicamente significativo ou prejuízo social/ocupacional",
+      "Não são atribuíveis aos efeitos de substância ou condição médica",
+      "A perturbação não é explicada melhor por outro transtorno mental",
+      "Pode haver insight bom/razoável, insight pobre ou ausência de insight (crenças delirantes)"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Estresse Pós-Traumático",
+    "sintomas_chave": [
+      "Exposição a episódio real ou ameaça de morte, lesão grave ou violência sexual",
+      "Sintomas de intrusão (lembranças intrusivas, sonhos angustiantes, flashbacks)",
+      "Evitação persistente de estímulos associados ao evento traumático"
+    ],
+    "sintomas_secundarios": [
+      "Alterações negativas em cognições e no humor associadas ao evento",
+      "Incapacidade de recordar um aspecto importante do trauma",
+      "Crenças ou expectativas negativas persistentes e exageradas (sobre si, outros ou o mundo)",
+      "Alterações marcantes na excitação e reatividade (irritabilidade, raiva, hipervigilância)",
+      "Comportamento imprudente ou autodestrutivo",
+      "Resposta de sobressalto exagerada, problemas de concentração ou de sono",
+      "Duração dos sintomas superior a 1 mês com prejuízo clínico significativo"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Paranoide",
+    "sintomas_chave": [
+      "Desconfiança e suspeita global e injustificada em relação aos outros",
+      "Interpretação das intenções dos outros como malévolas",
+      "Início no começo da vida adulta em uma variedade de contextos"
+    ],
+    "sintomas_secundarios": [
+      "Suspeita, sem base suficiente, de estar sendo explorado ou enganado",
+      "Dúvidas injustificadas sobre a lealdade ou confiabilidade de amigos/colegas",
+      "Relutância em confiar por medo injustificado de que informações serão usadas contra si",
+      "Interpretação de significados humilhantes ou ameaçadores em observações benignas",
+      "Guarda rancores persistentes (não perdoa insultos ou ofensas)",
+      "Percebe ataques ao seu caráter e reage rapidamente com raiva e contra-ataque",
+      "Suspeitas recorrentes e injustificadas em relação à fidelidade do cônjuge ou parceiro"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Esquizoide",
+    "sintomas_chave": [
+      "Padrão difuso de distanciamento das relações sociais",
+      "Faixa restrita de expressão de emoções em configurações interpessoais",
+      "Início no começo da vida adulta"
+    ],
+    "sintomas_secundarios": [
+      "Não deseja nem gosta de relações íntimas (incluindo fazer parte de uma família)",
+      "Quase sempre escolhe atividades solitárias",
+      "Pouco ou nenhum interesse em ter experiências sexuais",
+      "Tem prazer em poucas ou nenhuma atividade",
+      "Falta de amigos íntimos ou confidentes (além de parentes de primeiro grau)",
+      "Parece indiferente aos elogios ou críticas de outros",
+      "Apresenta frieza emocional, distanciamento ou afeto embotado"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Antissocial",
+    "sintomas_chave": [
+      "Padrão difuso de desconsideração e violação dos direitos dos outros",
+      "Início aos 15 anos de idade (requer idade atual mínima de 18 anos)",
+      "Evidência de transtorno de conduta antes dos 15 anos"
+    ],
+    "sintomas_secundarios": [
+      "Fracasso em adequar-se às normas sociais referentes a comportamentos lícitos",
+      "Falsidade, manipulação, mentiras repetidas ou uso de pseudônimos",
+      "Impulsividade ou incapacidade de fazer planos",
+      "Irritabilidade e agressividade, marcadas por repetidas lutas físicas ou agressões",
+      "Desrespeito imprudente pela segurança de si mesmo ou dos outros",
+      "Irresponsabilidade consistente (no trabalho ou em obrigações financeiras)",
+      "Ausência de remorso, indiferença ou racionalização após ferir, maltratar ou roubar"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Borderline",
+    "sintomas_chave": [
+      "Padrão difuso de instabilidade das relações interpessoais, autoimagem e afetos",
+      "Impulsividade acentuada",
+      "Início no começo da vida adulta"
+    ],
+    "sintomas_secundarios": [
+      "Esforços frenéticos para evitar abandono real ou imaginado",
+      "Padrão de relacionamentos intensos alternando entre idealização e desvalorização",
+      "Perturbação da identidade (instabilidade acentuada e persistente da autoimagem)",
+      "Impulsividade em pelo menos duas áreas prejudiciais (gastos, sexo, abuso de substâncias, direção)",
+      "Comportamento, gestos ou ameaças suicidas recorrentes, ou automutilação",
+      "Instabilidade afetiva e sentimentos crônicos de vazio",
+      "Raiva intensa e inadequada ou ideação paranoide transitória/dissociação sob estresse"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Narcisista",
+    "sintomas_chave": [
+      "Padrão difuso de grandiosidade (em fantasia ou comportamento)",
+      "Necessidade de admiração",
+      "Falta de empatia"
+    ],
+    "sintomas_secundarios": [
+      "Senso grandioso de autoimportância, exagerando conquistas e talentos",
+      "Preocupação com fantasias de sucesso, poder, brilhantismo, beleza ou amor ideal",
+      "Crença de ser 'especial' e que só pode se associar a pessoas/instituições especiais",
+      "Exigência de admiração excessiva",
+      "Sentimento de intitulação (expectativas irracionais de tratamento privilegiado)",
+      "Exploração interpessoal (tira vantagem para atingir próprios fins)",
+      "Inveja frequente, crença de que é invejado e atitudes arrogantes"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Evitativa",
+    "sintomas_chave": [
+      "Padrão difuso de inibição social",
+      "Sentimentos de inadequação",
+      "Hipersensibilidade a avaliação negativa"
+    ],
+    "sintomas_secundarios": [
+      "Evita atividades ocupacionais envolvendo contato interpessoal por medo de crítica ou rejeição",
+      "Relutância em se envolver com os outros sem ter a certeza de ser apreciado",
+      "Mostra contenção em relacionamentos íntimos por medo de ser ridicularizado",
+      "Preocupação em ser criticado ou rejeitado em situações sociais",
+      "Inibição em novas situações devido a sentimentos de inadequação",
+      "Vê a si mesmo como socialmente inepto, sem atrativos ou inferior",
+      "Reluta de forma incomum em assumir riscos por medo do constrangimento"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Personalidade Obsessivo-Compulsiva",
+    "sintomas_chave": [
+      "Padrão difuso de preocupação com ordem, perfeccionismo e controle",
+      "Início no começo da vida adulta",
+      "Sacrifício da flexibilidade, abertura e eficiência"
+    ],
+    "sintomas_secundarios": [
+      "Preocupação extrema com detalhes, regras, listas e horários a ponto de perder o objetivo principal",
+      "Perfeccionismo que interfere na conclusão das tarefas",
+      "Devoção excessiva ao trabalho e produtividade (excluindo lazer e amizades)",
+      "Excesso de conscienciosidade e inflexibilidade moral/ética",
+      "Incapacidade de descartar objetos desgastados/sem valor",
+      "Relutância em delegar tarefas a não ser que sejam feitas exatamente do seu modo",
+      "Estilo avarento de gastos, rigidez e teimosia"
+    ]
+  },
+  {
+    "transtorno": "Transtorno de Déficit de Atenção/Hiperatividade (TDAH)",
+    "sintomas_chave": [
+      "Padrão persistente de desatenção e/ou hiperatividade-impulsividade",
+      "Os sintomas interferem no funcionamento ou desenvolvimento",
+      "Vários sintomas inatentos ou hiperativos-impulsivos estavam presentes antes dos 12 anos de idade"
+    ],
+    "sintomas_secundarios": [
+      "Desatenção a detalhes, erros por descuido, dificuldade de manter a atenção",
+      "Parece não ouvir quando falado diretamente, não segue instruções",
+      "Dificuldade de organização, evita/desgosta de tarefas que exigem esforço mental sustentado",
+      "Perde objetos necessários, é facilmente distraído, é esquecido nas atividades diárias",
+      "Agita as mãos ou os pés, debate-se na cadeira, levanta-se em situações inapropriadas",
+      "Corre ou sobe nas coisas (ou sensação de inquietude), incapaz de brincar silenciosamente",
+      "Fala excessivamente, responde impulsivamente, dificuldade de esperar a vez, interrompe os outros"
+    ]
+  },
+  {
+    "transtorno": "Transtorno do Espectro Autista",
+    "sintomas_chave": [
+      "Déficits persistentes na comunicação social e interação social em múltiplos contextos",
+      "Padrões restritos e repetitivos de comportamento, interesses ou atividades",
+      "Sintomas presentes precocemente (embora possam não se manifestar plenamente até exigências sociais excederem capacidades)"
+    ],
+    "sintomas_secundarios": [
+      "Déficits na reciprocidade socioemocional",
+      "Déficits nos comportamentos comunicativos não verbais",
+      "Déficits para desenvolver, manter e compreender relacionamentos sociais apropriados à idade",
+      "Movimentos motores, uso de objetos ou fala estereotipados/repetitivos",
+      "Insistência excessiva em rotinas e resistência a mudanças (adesão inflexível)",
+      "Interesses altamente restritos e fixos anormais em intensidade ou foco",
+      "Hiper ou hiporreatividade a estímulos sensoriais do ambiente"
+    ]
+  }
+]

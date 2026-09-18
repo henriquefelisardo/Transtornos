@@ -1,0 +1,382 @@
+graph TD
+    tp_breve["Transtorno Psicótico Breve"]
+    esquizofreniforme["Transtorno Esquizofreniforme"]
+    esquizofrenia["Esquizofrenia"]
+    bipolar_1["Transtorno Bipolar Tipo I"]
+    bipolar_2["Transtorno Bipolar Tipo II"]
+    depressivo_maior["Transtorno Depressivo Maior"]
+    ansiedade_generalizada["Transtorno de Ansiedade Generalizada"]
+    panico["Transtorno do Pânico"]
+    toc["Transtorno Obsessivo-Compulsivo"]
+    tept["Transtorno de Estresse Pós-Traumático"]
+    tp_paranoide["Transtorno de Personalidade Paranoide"]
+    tp_esquizoide["Transtorno de Personalidade Esquizoide"]
+    tp_antissocial["Transtorno de Personalidade Antissocial"]
+    tp_borderline["Transtorno de Personalidade Borderline"]
+    tp_narcisista["Transtorno de Personalidade Narcisista"]
+    tp_evitativa["Transtorno de Personalidade Evitativa"]
+    tp_obsessivo_compulsiva["Transtorno de Personalidade Obsessivo-Compulsiva"]
+    tdah["Transtorno de Déficit de Atenção/Hiperatividade (TDAH)"]
+    tea["Transtorno do Espectro Autista"]
+    q_psicotico_umbrella["Você tem visto, ouvido ou acreditad..."]
+    q_psicotico_umbrella -->|umbrella| tp_breve
+    q_psicotico_umbrella -->|umbrella| esquizofreniforme
+    q_psicotico_umbrella -->|umbrella| esquizofrenia
+    q_humor_umbrella["Você já teve períodos longos de tri..."]
+    q_humor_umbrella -->|umbrella| bipolar_1
+    q_humor_umbrella -->|umbrella| bipolar_2
+    q_humor_umbrella -->|umbrella| depressivo_maior
+    q_ansiedade_umbrella["Você sofre frequentemente com preoc..."]
+    q_ansiedade_umbrella -->|umbrella| ansiedade_generalizada
+    q_ansiedade_umbrella -->|umbrella| panico
+    q_personalidade_umbrella["Você percebe que, desde o início da..."]
+    q_personalidade_umbrella -->|umbrella| tp_paranoide
+    q_personalidade_umbrella -->|umbrella| tp_esquizoide
+    q_personalidade_umbrella -->|umbrella| tp_antissocial
+    q_personalidade_umbrella -->|umbrella| tp_borderline
+    q_personalidade_umbrella -->|umbrella| tp_narcisista
+    q_personalidade_umbrella -->|umbrella| tp_evitativa
+    q_personalidade_umbrella -->|umbrella| tp_obsessivo_compulsiva
+    q_neurodesenv_umbrella["Desde a sua infância, você apresent..."]
+    q_neurodesenv_umbrella -->|umbrella| tdah
+    q_neurodesenv_umbrella -->|umbrella| tea
+    q_trauma_umbrella["Você passou por um evento traumátic..."]
+    q_trauma_umbrella -->|umbrella| tept
+    q_toc_umbrella["Você sofre com pensamentos ruins qu..."]
+    q_toc_umbrella -->|umbrella| toc
+    q_delirios["Você costuma ter convicções muito f..."]
+    q_alucinacoes["Você costuma ouvir vozes, enxergar ..."]
+    q_discurso_desorganizado["As pessoas frequentemente dizem que..."]
+    q_comportamento_desorganizado["Você tem tido comportamentos muito ..."]
+    q_psicotico_duracao_breve["Esses episódios de ouvir vozes ou d..."]
+    q_psicotico_retorno_normal["Você se recuperou totalmente após e..."]
+    q_sintomas_negativos["Você tem sentido uma enorme falta d..."]
+    q_psicotico_duracao_media["Esses sintomas estranhos duraram de..."]
+    q_psicotico_queda_funcionamento["Desde que os problemas começaram, s..."]
+    q_psicotico_duracao_longa["Esses sintomas ou o comportamento e..."]
+    q_episodio_maniaco["Você já teve pelo menos uma vez na ..."]
+    q_aumento_energia["Nesse período você teve um aumento ..."]
+    q_mania_duracao["A euforia e aceleração persistiram ..."]
+    q_autoestima_inflada["Você se sentiu com uma autoconfianç..."]
+    q_reducao_sono["Nessa fase, você precisava dormir m..."]
+    q_loquacidade["Você falava muito mais e mais rápid..."]
+    q_fuga_ideias["Você sentia que seus pensamentos es..."]
+    q_distratibilidade["Sua atenção desviava facilmente par..."]
+    q_risco_excessivo["Você tomou atitudes por impulso com..."]
+    q_episodio_hipomaniaco["Você já teve um período mais curto ..."]
+    q_episodio_depressivo["Você já teve épocas em que ficou pr..."]
+    q_sem_mania["Você tem certeza de que nunca teve ..."]
+    q_hipomania_humor["Naquela fase mais leve (de 4 dias),..."]
+    q_hipomania_energia["Sua energia e ritmo de atividades f..."]
+    q_hipomania_sem_prejuizo["Essas mudanças não chegaram a causa..."]
+    q_depressao_humor["Na fase triste, o desânimo ocorria ..."]
+    q_peso_apetite["Houve alterações muito fortes no se..."]
+    q_insonia_hipersonia["Você teve muita dificuldade para do..."]
+    q_depressao_secundarios["Nesse período você sentiu muito can..."]
+    q_humor_deprimido["Você tem se sentido triste, vazio o..."]
+    q_perda_interesse["Você perdeu quase todo o interesse ..."]
+    q_depressao_duracao["Essa tristeza forte e falta de ener..."]
+    q_agitacao_retardo["Você se sente ou se move de forma m..."]
+    q_fadiga["Você sente um cansaço frequente ou ..."]
+    q_inutilidade_culpa["Você tem carregado uma culpa muito ..."]
+    q_concentracao_diminuida["Sua capacidade de raciocinar, focar..."]
+    q_ideacao_suicida["Você tem pensado repetidamente em m..."]
+    q_ansiedade_excessiva["Você tem preocupações constantes, a..."]
+    q_ansiedade_duracao["Essa ansiedade e preocupação aconte..."]
+    q_ansiedade_incontrolavel["Você acha muito difícil conseguir c..."]
+    q_inquieta_nervos["Você costuma se sentir impaciente, ..."]
+    q_fatigabilidade["Você se cansa com facilidade por ca..."]
+    q_branco_mente["A preocupação faz com que sua mente..."]
+    q_irritabilidade["Você se sente mais irritado e pavio..."]
+    q_tensao_muscular["Você sofre com tensão, rigidez ou d..."]
+    q_sono_ansioso["Você tem problemas para pegar no so..."]
+    q_ansiedade_sofrimento["Essa ansiedade causa sofrimento cla..."]
+    q_ataques_panico["Você já teve ataques de pânico (med..."]
+    q_medo_novos_ataques["Você fica pelo menos 1 mês sentindo..."]
+    q_evitacao_panico["Você mudou a forma como vive (como ..."]
+    q_panico_fisico_coracao["Na hora do ataque, você sente palpi..."]
+    q_panico_fisico_tremor["Nas crises, você tem suores exagera..."]
+    q_panico_fisico_ar["Durante a crise, você sente falta d..."]
+    q_panico_fisico_dor["Na crise, você sente dor ou aperto ..."]
+    q_panico_fisico_enjoo["Na hora da crise, ocorrem enjoos, d..."]
+    q_panico_fisico_calafrio["Você tem calafrios, ondas de calor ..."]
+    q_panico_psicologico["Nas crises, você tem a forte impres..."]
+    q_obsessoes["Você é frequentemente invadido por ..."]
+    q_compulsoes["Você se sente forçado a executar co..."]
+    q_tentativa_ignorar_obsessoes["Você tenta afastar ou neutralizar e..."]
+    q_compulsoes_objetivo["A principal intenção desses rituais..."]
+    q_compulsoes_excessivas["Suas ações para neutralizar os pens..."]
+    q_toc_tempo["Essas repetições ou pensamentos gas..."]
+    q_toc_sofrimento["Esse problema causa sofrimento sign..."]
+    q_trauma_exposicao["Você esteve exposto, presenciou ou ..."]
+    q_trauma_intrusao["Você revive o trauma através de lem..."]
+    q_trauma_evitacao["Você faz um esforço constante para ..."]
+    q_trauma_cognicao["Você notou alterações negativas nos..."]
+    q_trauma_amnesia["Você perdeu a capacidade de se lemb..."]
+    q_trauma_crencas["Você mantém crenças fortemente nega..."]
+    q_trauma_reatividade["Sua reação de alerta mudou e agora ..."]
+    q_trauma_imprudencia["Desde o trauma você começou a agir ..."]
+    q_trauma_sono_concentracao["Desde o trauma você passou a ter pr..."]
+    q_trauma_duracao["A duração dessas lembranças ruins, ..."]
+    q_paranoide_desconfianca["Você costuma desconfiar das pessoas..."]
+    q_paranoide_intencoes["Você quase sempre enxerga as intenç..."]
+    q_tp_inicio["Seu padrão geral de ser e reagir se..."]
+    q_paranoide_explorado["Você suspeita muito, sem evidência ..."]
+    q_paranoide_lealdade["Você tem dúvidas injustificadas sob..."]
+    q_paranoide_confiar["Você tem muito medo de confiar info..."]
+    q_paranoide_significados["Você costuma interpretar críticas h..."]
+    q_paranoide_rancor["Você guarda rancor intensamente e t..."]
+    q_paranoide_ataques["Você sente que seu caráter está sem..."]
+    q_paranoide_fidelidade["Você suspeita repetidamente, sem mo..."]
+    q_esquizoide_distanciamento["Você mantém um padrão amplo de dist..."]
+    q_esquizoide_restricao_afeto["Você tem uma faixa muito limitada p..."]
+    q_esquizoide_desejo_relacoes["Você sente que realmente não deseja..."]
+    q_esquizoide_atividades["Você quase sempre escolhe atividade..."]
+    q_esquizoide_sexo["Você possui pouco ou nenhum interes..."]
+    q_esquizoide_prazer["Na grande maioria das vezes, você s..."]
+    q_esquizoide_amigos["Sem contar seus parentes de primeir..."]
+    q_esquizoide_indiferenca["Você parece ser totalmente indifere..."]
+    q_esquizoide_frieza["Você comumente demonstra frieza emo..."]
+    q_antissocial_violacao["Você frequentemente ignora regras e..."]
+    q_antissocial_idade["Atualmente, você tem 18 anos de ida..."]
+    q_antissocial_inicio["Você tem histórico de problemas gra..."]
+    q_antissocial_normas["Você fracassa frequentemente em se ..."]
+    q_antissocial_falsidade["Você costuma mentir repetidamente, ..."]
+    q_antissocial_impulsividade["Você age frequentemente por impulsi..."]
+    q_antissocial_agressividade["Sua vida é marcada por irritabilida..."]
+    q_antissocial_seguranca["Você frequentemente desrespeita de ..."]
+    q_antissocial_irresponsabilidade["Você apresenta grande irresponsabil..."]
+    q_antissocial_remorso["Você não sente nenhum remorso ou co..."]
+    q_borderline_instabilidade["Você tem grande instabilidade nos s..."]
+    q_borderline_impulsividade["Você é muito impulsivo em várias ár..."]
+    q_borderline_abandono["Você faz esforços desesperados para..."]
+    q_borderline_relacionamentos["Seus relacionamentos costumam ir ra..."]
+    q_borderline_identidade["Sua visão de quem você é e dos seus..."]
+    q_borderline_areas["Você age de forma impulsiva em cois..."]
+    q_borderline_suicidio["Você tem um histórico de comportame..."]
+    q_borderline_vazio["Você costuma lidar com um sentiment..."]
+    q_borderline_raiva["Você tem crises de raiva intensa qu..."]
+    q_narcisista_grandiosidade["Você frequentemente se sente muito ..."]
+    q_narcisista_admiracao["Você tem uma necessidade constante ..."]
+    q_narcisista_empatia["Você tem dificuldade de se colocar ..."]
+    q_narcisista_autoimportancia["Você tem um senso de grandeza, exag..."]
+    q_narcisista_fantasias["Você se perde frequentemente em fan..."]
+    q_narcisista_especial["Você acredita que é muito especial ..."]
+    q_narcisista_exigencia["Você exige que as pessoas te admire..."]
+    q_narcisista_privilegios["Você sente que tem o direito de rec..."]
+    q_narcisista_exploracao["Você costuma explorar as pessoas e ..."]
+    q_narcisista_inveja["Você sente muita inveja das outras ..."]
+    q_evitativa_inibicao["Você sofre com uma grande inibição ..."]
+    q_evitativa_inadequacao["Você convive com sentimentos profun..."]
+    q_evitativa_hipersensibilidade["Você é extremamente sensível a crít..."]
+    q_evitativa_ocupacional["Você evita trabalhos que envolvam c..."]
+    q_evitativa_relutancia["Você se recusa a se envolver com as..."]
+    q_evitativa_intimos["Você evita intimidade e relacioname..."]
+    q_evitativa_critica["Sua preocupação em ser criticado ou..."]
+    q_evitativa_novas_situacoes["Você tem dificuldade de entrar em n..."]
+    q_evitativa_visao_si["Você se vê constantemente como algu..."]
+    q_evitativa_riscos["Você evita fortemente assumir qualq..."]
+    q_tpoc_ordem["Você tem uma preocupação exagerada ..."]
+    q_tpoc_flexibilidade["Seu controle e perfeccionismo exces..."]
+    q_tpoc_detalhes["Você se preocupa tanto com detalhes..."]
+    q_tpoc_perfeccionismo["Seu perfeccionismo é tão extremo qu..."]
+    q_tpoc_trabalho["Você é excessivamente devotado ao t..."]
+    q_tpoc_moral["Você é extremamente rígido e inflex..."]
+    q_tpoc_descartar["Você tem muita dificuldade ou é inc..."]
+    q_tpoc_delegar["Você se recusa a delegar tarefas ou..."]
+    q_tpoc_avareza["Você é muito 'pão-duro' e adota um ..."]
+    q_tdah_padrao["Você costuma ter muita dificuldade ..."]
+    q_tdah_prejuizo["Esses sintomas de desatenção ou hip..."]
+    q_tdah_infancia["Você apresentava vários sintomas de..."]
+    q_tdah_desatencao["Você frequentemente comete erros po..."]
+    q_tdah_escuta["As pessoas frequentemente reclamam ..."]
+    q_tdah_organizacao["Você tem muita dificuldade em se or..."]
+    q_tdah_perdas["Você costuma perder coisas importan..."]
+    q_tdah_agita["Você sente necessidade de batucar, ..."]
+    q_tdah_corre["Você tem uma sensação constante de ..."]
+    q_tdah_fala["Você fala excessivamente, responde ..."]
+    q_tea_comunicacao["Você sempre teve muita dificuldade ..."]
+    q_tea_padroes["Você tem comportamentos, rotinas ou..."]
+    q_tea_infancia["Essas dificuldades sociais ou compo..."]
+    q_tea_reciprocidade["Você tem dificuldade em conversar n..."]
+    q_tea_naoverbal["Você tem dificuldade em entender a ..."]
+    q_tea_relacionamentos["Você acha muito difícil desenvolver..."]
+    q_tea_estereotipias["Você frequentemente faz movimentos ..."]
+    q_tea_rotina["Você sente um incômodo enorme com q..."]
+    q_tea_interesses["Você possui interesses altamente fi..."]
+    q_tea_sensorial["Você é extremamente sensível (ou in..."]
+    tp_breve -->|key_symptom| q_delirios
+    tp_breve -->|key_symptom| q_alucinacoes
+    tp_breve -->|key_symptom| q_discurso_desorganizado
+    tp_breve -->|secondary_symptom| q_comportamento_desorganizado
+    tp_breve -->|secondary_symptom| q_psicotico_duracao_breve
+    tp_breve -->|secondary_symptom| q_psicotico_retorno_normal
+    esquizofreniforme -->|key_symptom| q_delirios
+    esquizofreniforme -->|key_symptom| q_alucinacoes
+    esquizofreniforme -->|key_symptom| q_discurso_desorganizado
+    esquizofreniforme -->|secondary_symptom| q_comportamento_desorganizado
+    esquizofreniforme -->|secondary_symptom| q_sintomas_negativos
+    esquizofreniforme -->|secondary_symptom| q_psicotico_duracao_media
+    esquizofrenia -->|key_symptom| q_delirios
+    esquizofrenia -->|key_symptom| q_alucinacoes
+    esquizofrenia -->|key_symptom| q_discurso_desorganizado
+    esquizofrenia -->|secondary_symptom| q_comportamento_desorganizado
+    esquizofrenia -->|secondary_symptom| q_sintomas_negativos
+    esquizofrenia -->|secondary_symptom| q_psicotico_queda_funcionamento
+    esquizofrenia -->|secondary_symptom| q_psicotico_duracao_longa
+    bipolar_1 -->|key_symptom| q_episodio_maniaco
+    bipolar_1 -->|key_symptom| q_aumento_energia
+    bipolar_1 -->|key_symptom| q_mania_duracao
+    bipolar_1 -->|secondary_symptom| q_autoestima_inflada
+    bipolar_1 -->|secondary_symptom| q_reducao_sono
+    bipolar_1 -->|secondary_symptom| q_loquacidade
+    bipolar_1 -->|secondary_symptom| q_fuga_ideias
+    bipolar_1 -->|secondary_symptom| q_distratibilidade
+    bipolar_1 -->|secondary_symptom| q_risco_excessivo
+    bipolar_2 -->|key_symptom| q_episodio_hipomaniaco
+    bipolar_2 -->|key_symptom| q_episodio_depressivo
+    bipolar_2 -->|key_symptom| q_sem_mania
+    bipolar_2 -->|secondary_symptom| q_hipomania_humor
+    bipolar_2 -->|secondary_symptom| q_hipomania_energia
+    bipolar_2 -->|secondary_symptom| q_hipomania_sem_prejuizo
+    bipolar_2 -->|secondary_symptom| q_depressao_humor
+    bipolar_2 -->|secondary_symptom| q_peso_apetite
+    bipolar_2 -->|secondary_symptom| q_insonia_hipersonia
+    bipolar_2 -->|secondary_symptom| q_depressao_secundarios
+    depressivo_maior -->|key_symptom| q_humor_deprimido
+    depressivo_maior -->|key_symptom| q_perda_interesse
+    depressivo_maior -->|key_symptom| q_depressao_duracao
+    depressivo_maior -->|secondary_symptom| q_peso_apetite
+    depressivo_maior -->|secondary_symptom| q_insonia_hipersonia
+    depressivo_maior -->|secondary_symptom| q_agitacao_retardo
+    depressivo_maior -->|secondary_symptom| q_fadiga
+    depressivo_maior -->|secondary_symptom| q_inutilidade_culpa
+    depressivo_maior -->|secondary_symptom| q_concentracao_diminuida
+    depressivo_maior -->|secondary_symptom| q_ideacao_suicida
+    ansiedade_generalizada -->|key_symptom| q_ansiedade_excessiva
+    ansiedade_generalizada -->|key_symptom| q_ansiedade_duracao
+    ansiedade_generalizada -->|key_symptom| q_ansiedade_incontrolavel
+    ansiedade_generalizada -->|secondary_symptom| q_inquieta_nervos
+    ansiedade_generalizada -->|secondary_symptom| q_fatigabilidade
+    ansiedade_generalizada -->|secondary_symptom| q_branco_mente
+    ansiedade_generalizada -->|secondary_symptom| q_irritabilidade
+    ansiedade_generalizada -->|secondary_symptom| q_tensao_muscular
+    ansiedade_generalizada -->|secondary_symptom| q_sono_ansioso
+    ansiedade_generalizada -->|secondary_symptom| q_ansiedade_sofrimento
+    panico -->|key_symptom| q_ataques_panico
+    panico -->|key_symptom| q_medo_novos_ataques
+    panico -->|key_symptom| q_evitacao_panico
+    panico -->|secondary_symptom| q_panico_fisico_coracao
+    panico -->|secondary_symptom| q_panico_fisico_tremor
+    panico -->|secondary_symptom| q_panico_fisico_ar
+    panico -->|secondary_symptom| q_panico_fisico_dor
+    panico -->|secondary_symptom| q_panico_fisico_enjoo
+    panico -->|secondary_symptom| q_panico_fisico_calafrio
+    panico -->|secondary_symptom| q_panico_psicologico
+    toc -->|key_symptom| q_obsessoes
+    toc -->|key_symptom| q_compulsoes
+    toc -->|key_symptom| q_tentativa_ignorar_obsessoes
+    toc -->|secondary_symptom| q_compulsoes_objetivo
+    toc -->|secondary_symptom| q_compulsoes_excessivas
+    toc -->|secondary_symptom| q_toc_tempo
+    toc -->|secondary_symptom| q_toc_sofrimento
+    tept -->|key_symptom| q_trauma_exposicao
+    tept -->|key_symptom| q_trauma_intrusao
+    tept -->|key_symptom| q_trauma_evitacao
+    tept -->|secondary_symptom| q_trauma_cognicao
+    tept -->|secondary_symptom| q_trauma_amnesia
+    tept -->|secondary_symptom| q_trauma_crencas
+    tept -->|secondary_symptom| q_trauma_reatividade
+    tept -->|secondary_symptom| q_trauma_imprudencia
+    tept -->|secondary_symptom| q_trauma_sono_concentracao
+    tept -->|secondary_symptom| q_trauma_duracao
+    tp_paranoide -->|key_symptom| q_paranoide_desconfianca
+    tp_paranoide -->|key_symptom| q_paranoide_intencoes
+    tp_paranoide -->|key_symptom| q_tp_inicio
+    tp_paranoide -->|secondary_symptom| q_paranoide_explorado
+    tp_paranoide -->|secondary_symptom| q_paranoide_lealdade
+    tp_paranoide -->|secondary_symptom| q_paranoide_confiar
+    tp_paranoide -->|secondary_symptom| q_paranoide_significados
+    tp_paranoide -->|secondary_symptom| q_paranoide_rancor
+    tp_paranoide -->|secondary_symptom| q_paranoide_ataques
+    tp_paranoide -->|secondary_symptom| q_paranoide_fidelidade
+    tp_esquizoide -->|key_symptom| q_esquizoide_distanciamento
+    tp_esquizoide -->|key_symptom| q_esquizoide_restricao_afeto
+    tp_esquizoide -->|key_symptom| q_tp_inicio
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_desejo_relacoes
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_atividades
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_sexo
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_prazer
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_amigos
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_indiferenca
+    tp_esquizoide -->|secondary_symptom| q_esquizoide_frieza
+    tp_antissocial -->|key_symptom| q_antissocial_violacao
+    tp_antissocial -->|key_symptom| q_antissocial_idade
+    tp_antissocial -->|key_symptom| q_antissocial_inicio
+    tp_antissocial -->|secondary_symptom| q_antissocial_normas
+    tp_antissocial -->|secondary_symptom| q_antissocial_falsidade
+    tp_antissocial -->|secondary_symptom| q_antissocial_impulsividade
+    tp_antissocial -->|secondary_symptom| q_antissocial_agressividade
+    tp_antissocial -->|secondary_symptom| q_antissocial_seguranca
+    tp_antissocial -->|secondary_symptom| q_antissocial_irresponsabilidade
+    tp_antissocial -->|secondary_symptom| q_antissocial_remorso
+    tp_borderline -->|key_symptom| q_borderline_instabilidade
+    tp_borderline -->|key_symptom| q_borderline_impulsividade
+    tp_borderline -->|key_symptom| q_tp_inicio
+    tp_borderline -->|secondary_symptom| q_borderline_abandono
+    tp_borderline -->|secondary_symptom| q_borderline_relacionamentos
+    tp_borderline -->|secondary_symptom| q_borderline_identidade
+    tp_borderline -->|secondary_symptom| q_borderline_areas
+    tp_borderline -->|secondary_symptom| q_borderline_suicidio
+    tp_borderline -->|secondary_symptom| q_borderline_vazio
+    tp_borderline -->|secondary_symptom| q_borderline_raiva
+    tp_narcisista -->|key_symptom| q_narcisista_grandiosidade
+    tp_narcisista -->|key_symptom| q_narcisista_admiracao
+    tp_narcisista -->|key_symptom| q_narcisista_empatia
+    tp_narcisista -->|secondary_symptom| q_narcisista_autoimportancia
+    tp_narcisista -->|secondary_symptom| q_narcisista_fantasias
+    tp_narcisista -->|secondary_symptom| q_narcisista_especial
+    tp_narcisista -->|secondary_symptom| q_narcisista_exigencia
+    tp_narcisista -->|secondary_symptom| q_narcisista_privilegios
+    tp_narcisista -->|secondary_symptom| q_narcisista_exploracao
+    tp_narcisista -->|secondary_symptom| q_narcisista_inveja
+    tp_evitativa -->|key_symptom| q_evitativa_inibicao
+    tp_evitativa -->|key_symptom| q_evitativa_inadequacao
+    tp_evitativa -->|key_symptom| q_evitativa_hipersensibilidade
+    tp_evitativa -->|secondary_symptom| q_evitativa_ocupacional
+    tp_evitativa -->|secondary_symptom| q_evitativa_relutancia
+    tp_evitativa -->|secondary_symptom| q_evitativa_intimos
+    tp_evitativa -->|secondary_symptom| q_evitativa_critica
+    tp_evitativa -->|secondary_symptom| q_evitativa_novas_situacoes
+    tp_evitativa -->|secondary_symptom| q_evitativa_visao_si
+    tp_evitativa -->|secondary_symptom| q_evitativa_riscos
+    tp_obsessivo_compulsiva -->|key_symptom| q_tpoc_ordem
+    tp_obsessivo_compulsiva -->|key_symptom| q_tp_inicio
+    tp_obsessivo_compulsiva -->|key_symptom| q_tpoc_flexibilidade
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_detalhes
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_perfeccionismo
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_trabalho
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_moral
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_descartar
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_delegar
+    tp_obsessivo_compulsiva -->|secondary_symptom| q_tpoc_avareza
+    tdah -->|key_symptom| q_tdah_padrao
+    tdah -->|key_symptom| q_tdah_prejuizo
+    tdah -->|key_symptom| q_tdah_infancia
+    tdah -->|secondary_symptom| q_tdah_desatencao
+    tdah -->|secondary_symptom| q_tdah_escuta
+    tdah -->|secondary_symptom| q_tdah_organizacao
+    tdah -->|secondary_symptom| q_tdah_perdas
+    tdah -->|secondary_symptom| q_tdah_agita
+    tdah -->|secondary_symptom| q_tdah_corre
+    tdah -->|secondary_symptom| q_tdah_fala
+    tea -->|key_symptom| q_tea_comunicacao
+    tea -->|key_symptom| q_tea_padroes
+    tea -->|key_symptom| q_tea_infancia
+    tea -->|secondary_symptom| q_tea_reciprocidade
+    tea -->|secondary_symptom| q_tea_naoverbal
+    tea -->|secondary_symptom| q_tea_relacionamentos
+    tea -->|secondary_symptom| q_tea_estereotipias
+    tea -->|secondary_symptom| q_tea_rotina
+    tea -->|secondary_symptom| q_tea_interesses
+    tea -->|secondary_symptom| q_tea_sensorial
