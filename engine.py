@@ -22,21 +22,21 @@ class InferenceEngine:
             total = len(d.get("key_symptoms", [])) + len(d.get("secondary_symptoms", []))
             self.total_symptoms[d["id"]] = total
 
-    def process_answer(self, question_id: str, answer: bool):
+    def process_answer(self, question_id: str, weight: float):
         """
-        Processa a resposta do usuário.
-        Se 'Sim', aumenta a pontuação se for sintoma da doença.
-        Se 'Não', aplica uma micro-penalidade (Sobrevivência Máxima).
+        Processa a resposta do usuário usando uma escala de peso (0.0 a 1.0).
+        0.0 = Nunca (Penalidade)
+        > 0.0 = Bônus proporcional à frequência do sintoma.
         """
         self.asked_questions.add(question_id)
-        self.answers[question_id] = answer
+        self.answers[question_id] = weight
         
         q_data = self.questions.get(question_id)
         if not q_data:
             return
             
-        if not answer:
-            # Penalidade muito mais branda para não cancelar o caminho rápido
+        if weight == 0.0:
+            # Resposta 'Nunca': penalidade para não cancelar instantaneamente (soft-pruning)
             for d_id, d in self.active_disorders.items():
                 if question_id in d.get("key_symptoms", []):
                     self.scores[d_id] -= 0.15
@@ -45,16 +45,14 @@ class InferenceEngine:
                 elif question_id in d.get("secondary_symptoms", []):
                     self.scores[d_id] -= 0.05
         else:
-            # Resposta 'Sim': atualizar pontuações
+            # Resposta > 0.0: atualizar pontuações multiplicadas pela intensidade
             for d_id, d in self.active_disorders.items():
                 if question_id in d.get("key_symptoms", []):
-                    # Bônus maior para sintoma chave
-                    self.scores[d_id] += 2.0 / self.total_symptoms[d_id]
+                    self.scores[d_id] += (2.0 * weight) / self.total_symptoms[d_id]
                 elif question_id in d.get("secondary_symptoms", []):
-                    self.scores[d_id] += 1.2 / self.total_symptoms[d_id]
+                    self.scores[d_id] += (1.2 * weight) / self.total_symptoms[d_id]
                 elif q_data.get("type") == "umbrella" and d_id in q_data.get("targets", []):
-                    # Umbrella confirmada dá um pequeno bônus geral para a categoria
-                    self.scores[d_id] += 0.3
+                    self.scores[d_id] += (0.3 * weight)
 
     def get_next_question(self) -> Optional[Dict]:
         """
@@ -85,8 +83,8 @@ class InferenceEngine:
             # Checar pré-requisitos lógicos (Árvore de Dependência)
             dependency = q_data.get("depends_on")
             if dependency:
-                # Se a pergunta raiz ainda não foi feita, ou se foi respondida com Não, pulamos essa pergunta
-                if dependency not in self.answers or not self.answers[dependency]:
+                # Se a pergunta raiz ainda não foi feita, ou se a resposta foi 'Nunca' (0.0), pulamos essa pergunta
+                if dependency not in self.answers or self.answers[dependency] == 0.0:
                     continue
             
             targets_in_active = 0
@@ -124,11 +122,11 @@ class InferenceEngine:
             if q_data.get("type") == "umbrella":
                 score += 0.01 
                 
-            # FOCUS MODE: Se o líder já tem um score positivo relevante (> 0.2), 
-            # forçamos o algoritmo a investigar as perguntas do líder.
+            # FOCUS MODE REDUZIDO: Se o líder já tem um score positivo relevante, 
+            # forçamos o algoritmo a investigar as perguntas do líder, mas com multiplicador bem menor.
             # O peso do foco cresce proporcionalmente ao quão provável o líder está.
             if leader_score > 0.15 and is_leader_question:
-                score += (leader_score * 5.0)  # Multiplicador massivo de foco
+                score += (leader_score * 2.0)  # Multiplicador moderado de foco (era 5.0)
                 
             if score > max_score:
                 max_score = score
@@ -138,7 +136,8 @@ class InferenceEngine:
 
     def check_stop_conditions(self) -> Tuple[bool, Optional[Dict]]:
         """
-        Verifica se atingiu o threshold para alguma doença, retornando (True, Disordem) se sim.
+        Verifica se atingiu o threshold para alguma doença.
+        Aplica trava de cautela: nunca fecha antes de 15 perguntas.
         """
         if not self.active_disorders:
             return True, None
@@ -147,7 +146,8 @@ class InferenceEngine:
         best_score = self.scores[best_disorder_id]
         disorder = self.active_disorders[best_disorder_id]
         
-        if best_score >= disorder.get("threshold", 0.8):
+        # Trava de cautela: obrigar um mínimo de 15 perguntas investigativas
+        if best_score >= disorder.get("threshold", 0.8) and len(self.asked_questions) >= 15:
             return True, disorder
             
         return False, None
