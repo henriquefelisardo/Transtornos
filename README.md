@@ -88,4 +88,35 @@ Se quiser a experiência nerd e rápida, o terminal não exige instalação de b
 3. Use a **Seta Esquerda (⬅️)** e **Direita (➡️)** para alternar entre as respostas, e aperte **ENTER** para prosseguir. No terminal, se você solicitar a visualização do ranking na primeira tela, verá o *Leaderboard* das top 5 doenças atualizando a cada apertada de botão em tempo real.
 
 ---
+
+## 🌳 Visualização Interativa da Árvore (Grafo)
+
+Para facilitar o entendimento das amarrações da base de conhecimento clínica, o projeto conta com um gerador automático de grafos utilizando a biblioteca `pyvis`.
+
+### Como Gerar o Grafo
+1. Instale a biblioteca (caso ainda não possua):
+   ```bash
+   pip install pyvis
+   ```
+2. Execute o script gerador:
+   ```bash
+   python visualize_tree.py
+   ```
+Isso criará um arquivo chamado **`tree_visualization.html`**. Abra-o no seu navegador para interagir com a árvore completa!
+
+### Entendendo os Arquivos e as Cores
+O script lerá o `knowledge_base.json` e traduzirá a estrutura para um mapa visual codificado por cores:
+
+**Nós (Círculos e Caixas):**
+* 🟧 **Caixas Laranjas:** Representam os **Transtornos** catalogados.
+* 🟩 **Círculos Verdes:** Representam perguntas **Umbrella** (questões amplas usadas no início para rastreio ou exclusão de categorias inteiras).
+* 🟦 **Círculos Azuis:** Representam perguntas de **Sintomas** diretos ou detalhamentos.
+
+**Conexões (Setas):**
+* 🔶 **Laranja Forte (Espessa):** Liga um sintoma ao transtorno indicando ser um **Sintoma Chave** (alto peso na pontuação).
+* 🟨 **Amarela (Fina):** Liga um sintoma ao transtorno indicando ser um **Sintoma Secundário**.
+* 🟩 **Verde:** Liga uma pergunta Umbrella a todos os transtornos que ela engloba/foca.
+* ⬜ **Cinza:** Aponta a hierarquia clínica (`depends_on`). Se a seta sai da Pergunta A e vai para a B, indica que B é dependente de A. O sistema *nunca* fará a pergunta B se a A for negada pelo usuário.
+
+---
 **Aviso Legal:** O resultado gerado pelo algoritmo probabilístico deste projeto é um experimento matemático-lógico e de forma alguma substitui uma avaliação profissional, psiquiátrica ou psicológica clínica e humana. Procure sempre um profissional habilitado da saúde.
