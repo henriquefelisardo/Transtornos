@@ -2,77 +2,120 @@ import sys
 import tty
 import termios
 import textwrap
+import os
 from engine import InferenceEngine
 
-def get_key():
-    fd = sys.stdin.fileno()
-    old_settings = termios.tcgetattr(fd)
-    try:
-        tty.setraw(sys.stdin.fileno())
-        ch = sys.stdin.read(1)
-        if ch == '\x1b':  # Caracter de escape para setas
-            ch += sys.stdin.read(2)
-    finally:
-        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-    return ch
+def get_engine_state(engine: InferenceEngine):
+    return {
+        'scores': engine.scores.copy(),
+        'asked_questions': engine.asked_questions.copy(),
+        'answers': engine.answers.copy()
+    }
 
-def ask_yes_no(prompt: str) -> bool:
-    options = [("Sim", True), ("Não", False)]
-    selected_idx = 0
-    
-    print("=" * 80)
-    print("🧠 Akinator DSM-5 - Inferência Probabilística")
-    print("=" * 80)
-    
-    while True:
-        menu_parts = []
-        for i, (label, val) in enumerate(options):
-            if i == selected_idx:
-                menu_parts.append(f"\033[96m❯ [{label}]\033[0m")
-            else:
-                menu_parts.append(f"  [{label}]")
-        
-        menu_str = " ".join(menu_parts)
-        
-        sys.stdout.write(f"\r\033[K{prompt} {menu_str}")
-        sys.stdout.flush()
-        
-        key = get_key()
-        if key == '\x1b[C': # Seta Direita
-            selected_idx = min(len(options) - 1, selected_idx + 1)
-        elif key == '\x1b[D': # Seta Esquerda
-            selected_idx = max(0, selected_idx - 1)
-        elif key in ('\r', '\n'): # Enter
-            sys.stdout.write("\n\n")
-            return options[selected_idx][1]
-        elif key == '\x03': # Ctrl+C
-            sys.stdout.write("\nOperação cancelada pelo usuário.\n")
-            sys.exit(0)
+def restore_engine_state(engine: InferenceEngine, state: dict):
+    engine.scores = state['scores'].copy()
+    engine.asked_questions = state['asked_questions'].copy()
+    engine.answers = state['answers'].copy()
 
 def render_header(engine: InferenceEngine, prompt_text: str, show_log: bool):
-    # Cabeçalho
     print("=" * 80)
     print("🧠 Akinator DSM-5 - Inferência Probabilística")
     print("=" * 80)
     
     if show_log:
-        # Leaderboard (Top 5)
         print("  🏆 LEADERBOARD (Top 5 Diagnósticos):")
         sorted_disorders = sorted(engine.scores.items(), key=lambda x: x[1], reverse=True)
         top_5 = sorted_disorders[:5]
         
         for i, (d_id, score) in enumerate(top_5):
             name = engine.active_disorders.get(d_id, engine.disorders[0]).get("name", d_id) if d_id in engine.active_disorders else d_id
-            # Limita tamanho do nome para não quebrar layout
             name = (name[:45] + '...') if len(name) > 45 else name
             print(f"  {i+1}. {name.ljust(48)} ({score:+.2f})")
         print("=" * 80)
     
-    # Pergunta
-    wrapped_prompt = textwrap.fill(prompt_text, width=80)
-    print(f"{wrapped_prompt}")
+    if prompt_text:
+        wrapped_prompt = textwrap.fill(prompt_text, width=80)
+        print(f"{wrapped_prompt}")
 
-def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: int, prompt: str, show_log: bool) -> float:
+def interactive_menu(engine: InferenceEngine, prompt_text: str, options: list, default_idx: int, show_log: bool, can_go_back: bool):
+    selected_idx = default_idx
+    
+    sys.stdout.write('\033[?25l') # Esconder cursor
+    
+    # Limpa a tela inteira UMA vez por pergunta para evitar que a tela pisque (flicker)
+    sys.stdout.write('\033[2J\033[H')
+    
+    render_header(engine, prompt_text, show_log)
+    
+    if can_go_back:
+        print("\n\033[90m(Pressione Seta Esquerda para voltar à pergunta anterior)\033[0m")
+    else:
+        print()
+        
+    print("Selecione uma opção (Cima/Baixo para navegar, Enter para confirmar):")
+    print()
+    
+    # Pré-imprime as linhas vazias para podermos mover o cursor para cima depois
+    for _ in options:
+        print()
+        
+    sys.stdout.flush()
+    
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        # tty.setcbreak impede que a digitação seja ecoada no terminal ("ins desnecessário")
+        tty.setcbreak(fd)
+        while True:
+            # Volta o cursor N linhas para cima para redesenhar APENAS as opções
+            sys.stdout.write(f"\033[{len(options)}A")
+            
+            for i, (label, val) in enumerate(options):
+                if i == selected_idx:
+                    sys.stdout.write(f"\r\033[K  \033[96m❯ {label}\033[0m\n")
+                else:
+                    sys.stdout.write(f"\r\033[K    {label}\n")
+            
+            sys.stdout.flush()
+            
+            ch = sys.stdin.read(1)
+            if ch == '\x1b':
+                ch2 = sys.stdin.read(1)
+                if ch2 == '[':
+                    ch3 = sys.stdin.read(1)
+                    key = '\x1b[' + ch3
+                else:
+                    key = ch
+            else:
+                key = ch
+                
+            if key == '\x1b[B': # Baixo
+                selected_idx = min(len(options) - 1, selected_idx + 1)
+            elif key == '\x1b[A': # Cima
+                selected_idx = max(0, selected_idx - 1)
+            elif key == '\x1b[D': # Esquerda (Voltar)
+                if can_go_back:
+                    return 'BACK'
+            elif key in ('\x08', '\x7f'): # Backspace
+                if can_go_back:
+                    return 'BACK'
+            elif key in ('\r', '\n', '\x1b[C'): # Enter ou Direita para confirmar
+                return options[selected_idx][1]
+            elif key == '\x03': # Ctrl+C
+                sys.stdout.write("\nOperação cancelada pelo usuário.\n")
+                sys.stdout.write('\033[?25h')
+                sys.exit(0)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        sys.stdout.write('\033[?25h') # Mostrar cursor
+        sys.stdout.write('\033[2J\033[H') # Limpar tela ao sair do menu para manter limpo
+        sys.stdout.flush()
+
+def ask_yes_no(engine: InferenceEngine, prompt: str) -> bool:
+    options = [("Sim", True), ("Não", False)]
+    return interactive_menu(engine, prompt, options, default_idx=0, show_log=False, can_go_back=False)
+
+def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: int, prompt: str, show_log: bool, can_go_back: bool):
     prompt_text = f"Pergunta [{question_count+1}/{max_questions}]: {prompt}"
     
     options = [
@@ -82,35 +125,8 @@ def ask_frequency(engine: InferenceEngine, question_count: int, max_questions: i
         ("Concordo um pouco", 0.75),
         ("Concordo Totalmente", 1.0)
     ]
-    selected_idx = 2  # Começa no "Não Sei" por padrão
     
-    render_header(engine, prompt_text, show_log)
-    
-    while True:
-        menu_parts = []
-        for i, (label, weight) in enumerate(options):
-            if i == selected_idx:
-                menu_parts.append(f"\033[96m❯ [{label}]\033[0m")
-            else:
-                menu_parts.append(f"  [{label}]")
-        
-        menu_str = " ".join(menu_parts)
-        
-        # Redraw only the menu line
-        sys.stdout.write(f"\r\033[K{menu_str}")
-        sys.stdout.flush()
-        
-        key = get_key()
-        if key == '\x1b[C': # Seta Direita
-            selected_idx = min(len(options) - 1, selected_idx + 1)
-        elif key == '\x1b[D': # Seta Esquerda
-            selected_idx = max(0, selected_idx - 1)
-        elif key in ('\r', '\n'): # Enter
-            sys.stdout.write("\n\n") # Give space for next question
-            return options[selected_idx][1]
-        elif key == '\x03': # Ctrl+C
-            sys.stdout.write("\nOperação cancelada pelo usuário.\n")
-            sys.exit(0)
+    return interactive_menu(engine, prompt_text, options, default_idx=2, show_log=show_log, can_go_back=can_go_back)
 
 def print_diagnosis_details(disorder_id: str, engine_instance):
     import json
@@ -148,12 +164,12 @@ def main():
         print("Erro: O arquivo 'knowledge_base.json' não foi encontrado no diretório atual.")
         sys.exit(1)
     
-    show_log = ask_yes_no("Ativar log de debug (ranking de diagnósticos)?")
+    show_log = ask_yes_no(engine, "Ativar log de debug (ranking de diagnósticos)?")
     
-    question_count = 0
+    history = []
     max_questions = 50
     
-    while question_count < max_questions:
+    while True:
         stop, result = engine.check_stop_conditions()
         if stop:
             print("=" * 80)
@@ -166,15 +182,26 @@ def main():
                 print("=" * 80)
             return
 
+        if len(history) >= max_questions:
+            break
+
         q = engine.get_next_question()
         if not q:
             break
             
-        weight = ask_frequency(engine, question_count, max_questions, q['text'], show_log)
-        engine.process_answer(q["id"], weight)
-        question_count += 1
+        current_state = get_engine_state(engine)
         
-    # Limite de perguntas atingido
+        weight = ask_frequency(engine, len(history), max_questions, q['text'], show_log, can_go_back=len(history) > 0)
+        
+        if weight == 'BACK':
+            if history:
+                prev_state = history.pop()
+                restore_engine_state(engine, prev_state)
+            continue
+            
+        history.append(current_state)
+        engine.process_answer(q["id"], weight)
+        
     stop, result = engine.check_stop_conditions()
     print("=" * 80)
     if result:
