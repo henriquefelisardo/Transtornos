@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if show_log and top_disorders %}
+<div class="card p-3 mb-4">
+    <h5 class="text-warning">🏆 LEADERBOARD (Top 5 Diagnósticos):</h5>
+    <ul class="list-unstyled mb-0">
+        {% for d in top_disorders %}
+        <li>{{ d.rank }}. {{ d.name }} <span class="float-end text-info">({{ d.score }})</span></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<div class="card p-4">
+    <h5 class="mb-4">Pergunta [{{ question_count }}/{{ max_questions }}]:</h5>
+    <p class="fs-5 mb-5">{{ question.text }}</p>
+    
+    <div class="d-flex flex-wrap justify-content-center gap-2" id="options-container">
+        <!-- These IDs and data-weights map to the 5 standard options -->
+        <div class="btn option-btn px-3 py-2" data-weight="0.0">Discordo Totalmente</div>
+        <div class="btn option-btn px-3 py-2" data-weight="0.25">Discordo</div>
+        <div class="btn option-btn px-3 py-2" data-weight="0.5">Não Sei</div>
+        <div class="btn option-btn px-3 py-2" data-weight="0.75">Concordo um pouco</div>
+        <div class="btn option-btn px-3 py-2" data-weight="1.0">Concordo Totalmente</div>
+    </div>
+</div>
+
+<form method="POST" action="{% url 'answer' %}" id="answer-form" style="display: none;">
+    {% csrf_token %}
+    <input type="hidden" name="question_id" value="{{ question.id }}">
+    <input type="hidden" name="weight" id="weight-input">
+</form>
+
+<div class="text-center mt-4 text-muted">
+    <small>Use as <b>setas (← →)</b> para navegar e <b>Enter/Espaço</b> para selecionar.</small>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const options = document.querySelectorAll(".option-btn");
+        let selectedIdx = 2; // Default "Não Sei"
+        
+        function updateSelection() {
+            options.forEach((opt, idx) => {
+                if (idx === selectedIdx) {
+                    opt.classList.add("option-active");
+                    opt.innerHTML = "❯ " + opt.innerHTML.replace("❯ ", "");
+                } else {
+                    opt.classList.remove("option-active");
+                    opt.innerHTML = opt.innerHTML.replace("❯ ", "");
+                }
+            });
+        }
+        
+        updateSelection();
+        
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "ArrowRight") {
+                selectedIdx = Math.min(options.length - 1, selectedIdx + 1);
+                updateSelection();
+            } else if (e.key === "ArrowLeft") {
+                selectedIdx = Math.max(0, selectedIdx - 1);
+                updateSelection();
+            } else if (e.key === "Enter" || e.code === "Space") {
+                e.preventDefault(); // Prevent scrolling on space
+                const weight = options[selectedIdx].getAttribute("data-weight");
+                document.getElementById("weight-input").value = weight;
+                document.getElementById("answer-form").submit();
+            }
+        });
+    });
+</script>
+{% endblock %}

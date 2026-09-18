@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card p-5 text-center">
+    <h4>Bem-vindo ao Akinator DSM-5</h4>
+    <p class="mt-3">Você responderá a algumas perguntas para chegar a um diagnóstico provável.</p>
+    
+    <form method="POST" action="{% url 'index' %}" class="mt-4" id="start-form">
+        {% csrf_token %}
+        <div class="form-check form-switch d-flex justify-content-center mb-4">
+            <input class="form-check-input me-2" type="checkbox" id="show_log" name="show_log" checked style="cursor:pointer;">
+            <label class="form-check-label" for="show_log" style="cursor:pointer;">
+                Ativar log de debug (ranking de diagnósticos durante o teste)?
+            </label>
+        </div>
+        <button type="submit" class="btn btn-outline-info px-5" id="start-btn">Iniciar</button>
+    </form>
+    <small class="text-muted mt-5 d-block">Dica: Use Enter ou Espaço para iniciar e navegar.</small>
+</div>
+
+<script>
+    // Allow pressing Enter or Space to start
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" || e.code === "Space") {
+            e.preventDefault();
+            document.getElementById("start-form").submit();
+        }
+    });
+</script>
+{% endblock %}
