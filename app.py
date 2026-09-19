@@ -94,9 +94,18 @@ else:
     # Check stop conditions
     if not st.session_state.game_over:
         stop, result = engine.check_stop_conditions()
-        if stop or len(st.session_state.history) >= max_questions:
+        if stop:
             st.session_state.game_over = True
             st.session_state.result = result
+        elif len(st.session_state.history) >= max_questions:
+            # Acabou o limite de 50 perguntas. Força avaliação.
+            st.session_state.game_over = True
+            if engine.active_disorders:
+                best_id = max(engine.scores, key=engine.scores.get)
+                if engine.scores[best_id] >= engine.active_disorders[best_id].get("threshold", 0.8):
+                    st.session_state.result = engine.active_disorders[best_id]
+                else:
+                    st.session_state.result = None
 
     if st.session_state.game_over:
         result = st.session_state.result
@@ -121,9 +130,6 @@ else:
             if max_possible <= threshold:
                 max_possible = threshold + 0.5
                 
-            # Interpolação para tornar a escala mais natural:
-            # 0 até threshold -> mapeia de 0 a 80%
-            # threshold até max_possible -> mapeia de 80 a 100%
             if raw_score <= threshold:
                 pct = (raw_score / threshold) * 80
             else:
@@ -173,7 +179,14 @@ else:
     else:
         q = engine.get_next_question()
         if not q:
+            # Esgotou as perguntas disponíveis antes de bater o limite máximo
             st.session_state.game_over = True
+            if engine.active_disorders:
+                best_id = max(engine.scores, key=engine.scores.get)
+                if engine.scores[best_id] >= engine.active_disorders[best_id].get("threshold", 0.8):
+                    st.session_state.result = engine.active_disorders[best_id]
+                else:
+                    st.session_state.result = None
             st.rerun()
             
         question_count = len(st.session_state.history)
