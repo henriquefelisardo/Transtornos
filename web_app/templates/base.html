@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akinator DSM-5</title>
+    <title>DSM-5</title>
     <!-- Bootstrap CSS for basic styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <div class="text-center mb-2">
-            <h2 class="header-title m-0 d-block d-md-inline-block align-middle">🧠 Akinator DSM-5 - Inferência Probabilística</h2>
+            <h2 class="header-title m-0 d-block d-md-inline-block align-middle">🧠 DSM-5 - Inferência Probabilística</h2>
             {% if request.path != '/' %}
             <a href="{% url 'index' %}" onclick="if(!confirm('Tem certeza que deseja reiniciar o teste e voltar ao menu inicial? Todo o seu progresso será perdido.')){event.preventDefault();}" class="btn btn-outline-danger btn-sm ms-md-3 mt-2 mt-md-0 align-middle" title="Voltar ao Menu">🔄 Início</a>
             {% endif %}

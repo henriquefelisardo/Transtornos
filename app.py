@@ -77,7 +77,7 @@ def print_diagnosis_details(disorder_id: str):
     st.markdown("---")
 
 
-st.title("🧠 Akinator DSM-5 - Inferência Probabilística")
+st.title("🧠 DSM-5 - Inferência Probabilística")
 
 if not st.session_state.started:
     #st.session_state.show_log = st.checkbox("Ativar log de debug (ranking de diagnósticos)?", value=st.session_state.show_log)

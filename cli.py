@@ -19,7 +19,7 @@ def restore_engine_state(engine: InferenceEngine, state: dict):
 
 def render_header(engine: InferenceEngine, prompt_text: str, show_log: bool):
     print("=" * 80)
-    print("🧠 Akinator DSM-5 - Inferência Probabilística")
+    print("🧠 DSM-5 - Inferência Probabilística")
     print("=" * 80)
     
     if show_log:
