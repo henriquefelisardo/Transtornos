@@ -382,7 +382,7 @@
     },
     {
       "id": "q_humor_umbrella",
-      "text": "Você já teve períodos longos de tristeza profunda ou épocas em que me sentiu exageradamente eufórico, acelerado e sem precisar dormir.",
+      "text": "Você já teve períodos longos de tristeza profunda ou épocas em que se sentiu exageradamente eufórico, acelerado e sem precisar dormir.",
       "type": "umbrella",
       "targets": [
         "bipolar_1",
@@ -1429,7 +1429,7 @@
     },
     {
       "id": "q_narcisista_especial",
-      "text": "Você acredita que é muito especial e que só pessoas de alto nível ou instituições importantes podem me compreender.",
+      "text": "Você acredita que é muito especial e que só pessoas de alto nível ou instituições importantes podem te compreender.",
       "type": "specific",
       "targets": [
         "tp_narcisista"
