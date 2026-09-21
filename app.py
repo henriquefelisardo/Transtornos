@@ -149,6 +149,7 @@ else:
             
             st.success(f"✅ DIAGNÓSTICO ATINGIDO{limit_msg}: **{result['name']}**")
             st.metric("Índice de Compatibilidade (Sintomas Apresentados)", f"{pct_score}/100")
+            st.caption(f"*(Rating Interno do Algoritmo: {raw_score:.2f})*")
             render_scale_explanation()
             
             print_diagnosis_details(result['id'])
@@ -161,6 +162,7 @@ else:
                 
                 st.info(f"**Transtorno mais próximo:** {engine.active_disorders[best_id]['name']}")
                 st.metric("Maior Índice de Compatibilidade Alcançado", f"{pct_score}/100")
+                st.caption(f"*(Rating Interno do Algoritmo: {raw_score:.2f})*")
                 render_scale_explanation()
             st.markdown("---")
             
@@ -181,7 +183,7 @@ else:
         # Define uma altura fixa para a pergunta, garantindo que os botões não fiquem pulando de altura
         st.markdown(
             f"""
-            <div style="height: 140px; display: flex; flex-direction: column; justify-content: center;">
+            <div style="min-height: 140px; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="margin: 0;">{q['text']}</h3>
             </div>
             """, 
